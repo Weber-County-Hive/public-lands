@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Public Land Changes Hands in Utah</title>
+<meta name="description" content="Four ways public land changes hands in Utah — easements, exchanges, transfers and monument boundaries — with real examples from the public record, the state laws underneath, and the questions worth asking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --ink:#141414; --muted:#5A5A5A; --rule:#E4DED0;
+  --gold:#9C7A1F; --gold-bright:#D4AF37; --gold-soft:#F7F1E1;
+  --black:#0A0A0A; --panel:#FAF8F3;
+  --red:#A63D2F; --red-soft:#F6E6E2; --green:#3E7A4F; --green-soft:#E4F0E7; --blue:#35607F; --blue-soft:#E3ECF3; --amber:#9A6A12; --amber-soft:#F8EDD5;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Newsreader',Georgia,serif;font-size:19px;line-height:1.6}
+a{color:var(--gold);text-underline-offset:3px}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+
+.topbar{background:#000;color:#BDBDBD;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em}
+.topbar .wrap{display:flex;justify-content:space-between;gap:10px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.topbar a{color:var(--gold-bright);text-decoration:none}
+.topbar a:hover{text-decoration:underline}
+
+.mast{background:var(--black);color:#F4E9DD;padding:30px 0 28px;text-align:center;border-bottom:4px solid var(--gold-bright)}
+.hex{width:46px;height:52px;margin:0 auto 10px;display:block}
+.pub{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-bright)}
+.mast h1{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(30px,6vw,48px);line-height:1.1;margin:14px auto 12px;max-width:700px;padding:0 16px}
+.dek{font-style:italic;color:#C9A878;font-size:20px;max-width:620px;margin:0 auto;padding:0 16px}
+.dateline{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9A9A9A;margin-top:16px;letter-spacing:.06em;padding:0 16px}
+
+main{padding:30px 0 50px}
+h2{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(24px,4.4vw,31px);line-height:1.2;margin:52px 0 12px;scroll-margin-top:16px}
+h2 .num{display:block;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.14em;color:var(--gold);margin-bottom:4px}
+h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:21px;margin:30px 0 8px}
+p{margin:0 0 16px}
+.lede{font-size:21px}
+.small{font-size:15px;color:var(--muted)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:8px 0 26px}
+.stat{background:var(--black);color:#F4E9DD;padding:14px 12px;border-top:3px solid var(--gold-bright);border-radius:2px}
+.stat .n{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(22px,4vw,30px);color:var(--gold-bright);line-height:1.1}
+.stat .l{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;color:#CFC6B8;margin-top:6px;line-height:1.35}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+.readerbox{border:1px solid var(--rule);border-left:4px solid var(--black);background:var(--panel);padding:16px 18px;margin:18px 0}
+.readerbox .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.readerbox p:last-child{margin-bottom:0}
+.toc{font-family:'IBM Plex Mono',monospace;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 14px;margin:10px 0 0;padding:0;list-style:none}
+.toc a{text-decoration:none;border-bottom:1px solid var(--gold-bright);color:var(--ink)}
+
+.callout{background:var(--gold-soft);border-left:4px solid var(--gold-bright);padding:16px 18px;margin:22px 0;border-radius:2px}
+.callout p:last-child{margin-bottom:0}
+
+.flips{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}
+@media(max-width:600px){.flips{grid-template-columns:1fr}}
+.flip{perspective:1000px}
+.flip .inner{display:grid;width:100%;cursor:pointer;transform-style:preserve-3d;transition:transform .55s ease}
+.flip.on .inner{transform:rotateY(180deg)}
+.flip .face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid var(--rule);border-radius:3px;padding:16px;display:flex;flex-direction:column;min-height:200px}
+.flip .front{background:#fff;border-top:4px solid var(--gold-bright)}
+.flip .back{background:var(--black);color:#F4E9DD;transform:rotateY(180deg);border-top:4px solid var(--gold-bright);font-size:15px;line-height:1.5}
+.flip .back p{margin:6px 0 10px}
+.flip .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.flip .back .k{color:var(--gold-bright)}
+.flip .t{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:20px;line-height:1.25;margin:6px 0}
+.flip .d{font-size:16px;color:var(--muted);line-height:1.45}
+.flip .hint{margin-top:auto;padding-top:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:.08em}
+.flip .back .hint{color:#9A9A9A}
+.flip .back dl{margin:4px 0 8px}
+.flip .back dt{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold-bright);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+.flip .back dd{margin:0}
+.flip .inner:focus-visible{outline:3px solid var(--gold-bright);outline-offset:3px}
+
+.verdicts{display:grid;gap:12px;margin:18px 0}
+.verdict{border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.verdict .claim{background:var(--panel);padding:12px 16px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.verdict .claim q{font-style:italic;font-size:17px;flex:1 1 300px}
+.chip{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:2px;white-space:nowrap;border:1.5px solid}
+.chip.sup{color:var(--green);background:var(--green-soft);border-color:var(--green)}
+.chip.part{color:var(--amber);background:var(--amber-soft);border-color:var(--amber)}
+.chip.no{color:var(--red);background:var(--red-soft);border-color:var(--red)}
+.verdict .rec{padding:12px 16px;font-size:16px}
+.verdict .rec p:last-child{margin-bottom:0}
+
+.ex{border:1px solid var(--rule);border-radius:3px;margin:18px 0;overflow:hidden}
+.ex-h{background:var(--black);color:#F4E9DD;padding:10px 14px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
+.ex-h .n{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px}
+.ex-h .y{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold-bright);letter-spacing:.08em}
+.ex-b{padding:14px 16px 6px;font-size:17px}
+.ex-b ul{margin:0 0 12px;padding-left:20px}
+.ex-b li{margin-bottom:6px}
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:2px;margin:0 4px 10px 0}
+.tag.benefit{background:var(--green-soft);color:var(--green)}
+.tag.question{background:var(--red-soft);color:var(--red)}
+.tag.status{background:var(--blue-soft);color:var(--blue)}
+.ex details{border-top:1px dashed var(--rule);margin:6px 0 10px}
+.ex details summary{padding:8px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;color:var(--gold)}
+
+.tbl-wrap{overflow-x:auto;margin:16px 0 22px;border:1px solid var(--rule);border-radius:3px}
+table{width:100%;border-collapse:collapse;font-size:15.5px;min-width:520px}
+th,td{border-bottom:1px solid var(--rule);padding:9px 10px;text-align:left;vertical-align:top}
+th{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--panel)}
+tr:last-child td{border-bottom:0}
+td.first{font-weight:600}
+.grade{display:inline-block;min-width:30px;text-align:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;padding:2px 6px;border-radius:2px;color:#fff}
+.g-A,.g-B{background:var(--green)}.g-C{background:var(--amber)}.g-D,.g-F{background:var(--red)}
+table.grades{min-width:760px}td.gc{text-align:center;white-space:nowrap}
+@media(max-width:640px){
+  table.grades{min-width:0}
+  table.grades tr:first-child{display:none}
+  table.grades tr{display:block;border-bottom:1px solid var(--rule);padding:8px 0}
+  table.grades td{display:block;border:0;padding:3px 12px}
+  table.grades td.gc{display:inline-block;padding:4px 6px 4px 12px;text-align:left}
+  table.grades td.gc::before{content:attr(data-l) " ";font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+}
+
+
+.diagram{border:1px solid var(--rule);background:var(--panel);border-radius:3px;padding:14px;margin:20px 0}
+.diagram .cap{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.diagram .mermaid{text-align:center;overflow-x:auto;font-family:'IBM Plex Mono',monospace;font-size:13px;white-space:pre-wrap;margin:0;background:none}
+.diagram .mermaid svg{max-width:100%;height:auto}
+.diagram .alt{font-size:14px;color:var(--muted);margin:10px 0 0}
+
+.viz{border:1px solid var(--rule);background:var(--panel);padding:16px;margin:22px 0;border-radius:3px}
+.viz-h{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px}
+.viz-title{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:19px;margin-bottom:6px}
+.toggle{display:flex;gap:6px}
+.toggle button{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;border:1px solid var(--black);background:#fff;color:var(--black);padding:6px 10px;cursor:pointer;border-radius:2px}
+.toggle button[aria-pressed="true"]{background:var(--black);color:var(--gold-bright)}
+.bars{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bar-row{display:grid;grid-template-columns:130px 1fr;gap:10px;align-items:center}
+.bar-lab{font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.3;color:var(--muted)}
+.bar-lab strong{display:block;color:var(--ink);font-size:13px}
+.bar-track{background:#EDE8DC;height:30px;position:relative;border-radius:2px}
+.bar-fill{height:100%;background:var(--gold-bright);transition:width .6s ease;border-radius:2px}
+.bar-fill.cut{background:var(--red)}
+.bar-val{position:absolute;left:8px;top:50%;transform:translateY(-50%);font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:var(--black);white-space:nowrap}
+.viz-cap{font-size:14px;color:var(--muted);margin:12px 0 0}
+@media(max-width:480px){.bar-row{grid-template-columns:96px 1fr}}
+
+.tl{margin:22px 0;border:1px solid var(--rule);border-radius:3px;background:#fff}
+.tl-dots{display:flex;overflow-x:auto;padding:14px 12px 8px;border-bottom:1px solid var(--rule);scrollbar-width:thin}
+.tl-dot{flex:0 0 auto;background:none;border:0;cursor:pointer;padding:4px 8px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)}
+.tl-dot span{display:block;width:14px;height:14px;border-radius:50%;margin:0 auto 5px;border:2px solid var(--black);background:#fff}
+.tl-dot.x span{background:var(--gold-bright)}.tl-dot.m span{background:var(--red)}.tl-dot.t span{background:var(--blue)}.tl-dot.e span{background:var(--green)}
+.tl-dot[aria-selected="true"]{color:var(--black);font-weight:600}
+.tl-dot[aria-selected="true"] span{box-shadow:0 0 0 3px var(--gold-soft),0 0 0 5px var(--gold-bright)}
+.tl-panel{padding:14px 16px 16px;min-height:130px}
+.tl-panel .yr{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold);letter-spacing:.1em}
+.tl-panel .hd{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:19px;margin:2px 0 6px}
+.tl-panel p{font-size:16px;margin:0}
+.legend{display:flex;flex-wrap:wrap;gap:12px;padding:0 16px 12px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--black);margin-right:5px;vertical-align:-1px}
+
+.pattern{border:1px solid var(--rule);background:var(--panel);border-radius:3px;padding:16px;margin:20px 0}
+.prow{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center;margin:8px 0}
+.ptrack{display:flex;height:28px;background:#EDE8DC;border-radius:2px;overflow:hidden}
+.seg{display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;min-width:22px}
+.seg.pp{background:#0A0A0A;color:#D4AF37}.seg.pd{background:#BDB39F;color:#141414}.seg.pv{background:#FFFFFF;color:#141414;border-left:1px solid #BDB39F}
+.pkey{display:flex;gap:14px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:10px}
+.pkey i{display:inline-block;width:12px;height:12px;vertical-align:-2px;margin-right:5px;border:1px solid #BDB39F}
+.bigthree{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+@media(max-width:600px){.bigthree{grid-template-columns:1fr}}
+.bigthree div{border-top:4px solid var(--gold-bright);background:#fff;border:1px solid var(--rule);padding:12px 14px;font-size:15.5px}
+.bigthree b{display:block;font-family:'Fraunces',Georgia,serif;font-size:26px;line-height:1.1;margin-bottom:4px}
+
+.kd{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+@media(max-width:640px){.kd{grid-template-columns:1fr}}
+.kd > div{border:1px solid var(--rule);border-radius:3px;padding:14px 16px}
+.kd h4{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px}
+.kd .know{border-top:4px solid var(--green)} .kd .know h4{color:var(--green)}
+.kd .dont{border-top:4px solid var(--amber)} .kd .dont h4{color:var(--amber)}
+.kd ul{margin:0;padding-left:18px;font-size:16px}
+.kd li{margin-bottom:6px}
+.bottomline{background:var(--black);color:#F4E9DD;padding:20px 22px;border-left:5px solid var(--gold-bright);margin:22px 0;border-radius:2px}
+.bottomline .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--gold-bright);text-transform:uppercase;margin-bottom:6px}
+.bottomline p:last-child{margin-bottom:0}
+
+.lookup{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+@media(max-width:600px){.lookup{grid-template-columns:1fr}}
+.lk{border:1px solid var(--rule);padding:12px 14px;border-radius:3px;font-size:15.5px}
+.lk a{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:17px;display:block;margin-bottom:2px}
+
+details.src{border:1px solid var(--rule);border-radius:3px;margin:26px 0;background:var(--panel)}
+details.src > summary{cursor:pointer;padding:12px 16px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--black)}
+details.src .inner{padding:0 18px 14px;font-size:15px}
+details.src h5{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:14px 0 6px}
+details.src ol{padding-left:26px;margin:0}
+details.src li{margin-bottom:7px;word-break:break-word}
+.how{color:var(--muted);font-size:13.5px}
+
+footer{background:var(--black);color:#9A9A9A;text-align:center;padding:24px 16px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em}
+footer .f1{color:var(--gold-bright);text-transform:uppercase;letter-spacing:.24em;margin-bottom:6px}
+footer a{color:#CFC6B8}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap"><a href="index.html">← PUBLIC-LANDS · ALL FILES</a><span>EXPLAINER 01</span></div></div>
+
+<header class="mast">
+  <svg class="hex" viewBox="0 0 46 52" aria-hidden="true"><polygon points="23,2 44,14 44,38 23,50 2,38 2,14" fill="none" stroke="#D4AF37" stroke-width="2.5"/><circle cx="23" cy="26" r="4" fill="#D4AF37"/></svg>
+  <div class="pub">The Weber County Hive</div>
+  <h1>How Public Land Changes Hands in Utah</h1>
+  <p class="dek">Four ways it happens, real Utah examples from the public record, the state laws underneath, and the questions worth asking every time.</p>
+  <div class="dateline">EXPLAINER · PUBLISHED SEPTEMBER 23, 2026 · UPDATED SEPTEMBER 23, 2026</div>
+</header>
+
+<main class="wrap">
+
+<div class="stats" aria-label="At a glance">
+  <div class="stat"><div class="n" data-count="2.9" data-dec="1" data-suf="M">2.9M</div><div class="l">acres removed from Bears Ears and Grand Staircase in July 2026</div></div>
+  <div class="stat"><div class="n" data-count="18.5" data-dec="1" data-suf="M">18.5M</div><div class="l">acres of federal land Utah sued to control</div></div>
+  <div class="stat"><div class="n" data-count="58601">58,601</div><div class="l">acres in the BLM's next Utah oil and gas lease sale</div></div>
+  <div class="stat"><div class="n" data-count="50" data-pre="$" data-suf="M">$50M</div><div class="l">cash Utah received in the 1998 Grand Staircase trade</div></div>
+</div>
+
+<div class="readerbox">
+  <div class="k">The reader's question</div>
+  <p>A reader sent us an essay built around an old stage trick: a faith healer draws your eye to one hand while the other does the real work. His point was that public-land deals can work the same way. The announcement is the hand you watch. The paperwork is the other one.</p>
+  <p>He also said most people involved in these deals act in good faith, and many land deals do real public good. We agree. The way to tell the difference is to read the paperwork, so we did.</p>
+</div>
+
+<p class="lede">This explainer covers the four main ways public land changes hands in Utah, with a real example of each from the public record. It also checks the reader's claims, lists the state laws that shaped these deals, and shows you where to look things up yourself.</p>
+
+<ul class="toc" aria-label="Sections">
+  <li><a href="#ways">The four ways</a></li><li><a href="#easements">Easements</a></li><li><a href="#exchanges">Exchanges</a></li><li><a href="#transfers">Transfers</a></li><li><a href="#monuments">Monuments</a></li><li><a href="#laws">The laws underneath</a></li><li><a href="#pattern">The pattern</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#questions">Questions</a></li><li><a href="#conclusion">Conclusion</a></li>
+</ul>
+
+<h2 id="ways"><span class="num">THE FOUR WAYS</span>Tap a card to see how each one works</h2>
+<div class="flips">
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false">
+    <span class="face front"><span class="k">01 · Easements</span><span class="t">Buying the rights, not the land</span><span class="d">The owner keeps the land but permanently gives up the right to develop it.</span><span class="hint">TAP TO FLIP ↻</span></span>
+    <span class="face back"><span class="k">01 · Easements</span><dl><dt>Who decides</dt><dd>The landowner, with a land trust or agency that holds the easement.</dd><dt>What the law requires</dt><dd>In Utah, recording with the county recorder and a copy to the county assessor.</dd><dt>Paperwork lives at</dt><dd>The county recorder, by parcel.</dd></dl><span class="hint">TAP TO FLIP BACK</span></span>
+  </div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false">
+    <span class="face front"><span class="k">02 · Exchanges</span><span class="t">Trading one parcel for another</span><span class="d">The state or a private party swaps land with the federal government.</span><span class="hint">TAP TO FLIP ↻</span></span>
+    <span class="face back"><span class="k">02 · Exchanges</span><dl><dt>Who decides</dt><dd>The federal agency, or Congress for large trades.</dd><dt>What the law requires</dt><dd>Equal value, cash capped at 25%, a public-interest finding, same state.</dd><dt>Paperwork lives at</dt><dd>BLM ePlanning, Congress.gov, Trust Lands board minutes.</dd></dl><span class="hint">TAP TO FLIP BACK</span></span>
+  </div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false">
+    <span class="face front"><span class="k">03 · Transfers</span><span class="t">Handing land over outright</span><span class="d">Federal land is given to the state or a local government.</span><span class="hint">TAP TO FLIP ↻</span></span>
+    <span class="face back"><span class="k">03 · Transfers</span><dl><dt>Who decides</dt><dd>Congress.</dd><dt>What the law requires</dt><dd>A specific act naming the land and its conditions.</dd><dt>Paperwork lives at</dt><dd>Congress.gov and BLM announcements.</dd></dl><span class="hint">TAP TO FLIP BACK</span></span>
+  </div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false">
+    <span class="face front"><span class="k">04 · Boundaries</span><span class="t">Redrawing the lines</span><span class="d">A president enlarges or shrinks a national monument, changing what can happen on the land.</span><span class="hint">TAP TO FLIP ↻</span></span>
+    <span class="face back"><span class="k">04 · Boundaries</span><dl><dt>Who decides</dt><dd>The president, under the 1906 Antiquities Act.</dd><dt>What the law requires</dt><dd>Protection limited to "the smallest area compatible" with the objects protected. No court has decided whether a later president can shrink a monument.</dd><dt>Paperwork lives at</dt><dd>The Federal Register; county recorders for mining claims.</dd></dl><span class="hint">TAP TO FLIP BACK</span></span>
+  </div></div>
+</div>
+
+<h2 id="easements"><span class="num">01 · CONSERVATION EASEMENTS</span>Buying the rights, not the land</h2>
+<p>A conservation easement is a legal agreement in which a landowner permanently gives up some rights, usually the right to subdivide or build, while keeping ownership. A land trust or government agency holds the easement and makes sure the restrictions are followed. There are two very different kinds.</p>
+
+<div class="diagram">
+  <div class="cap">How an easement gets paid for</div>
+  <pre class="mermaid">
+flowchart TD
+  A[Landowner gives up development rights] --> B{Sold or donated?}
+  B -->|Sold| C[Program or land trust pays the owner]
+  C --> D[Owner gets cash]
+  B -->|Donated| E[No one pays the owner]
+  E --> F[Owner may claim a federal tax deduction, capped each year by income]
+  D --> H[Easement recorded with the county]
+  F --> H
+  </pre>
+  <p class="alt">Text version: a sold easement pays the owner cash. A donated easement pays nothing but may qualify for a federal tax deduction, capped at 50% of income a year (100% for qualifying farmers and ranchers) and carried forward up to 15 years. Either way, it is recorded with the county.</p>
+</div>
+
+<h3>Checking the reader's claims</h3>
+<div class="verdicts">
+  <div class="verdict"><div class="claim"><q>A landowner can place an easement and write off the full $27 million difference in value in one step.</q><span class="chip no">Doesn't work as described</span></div>
+    <div class="rec"><p>Only a <em>donated</em> easement qualifies, and the deduction is capped at 50% of the donor's income each year (100% for qualifying farmers and ranchers), carried forward up to 15 years. Since 2022, federal law also disallows partnership deductions more than 2.5 times what partners put in, which targeted the most abused version.</p></div></div>
+  <div class="verdict"><div class="claim"><q>After placing an easement, the owner can trade the protected land to the federal government for developable land.</q><span class="chip no">Doesn't add up</span></div>
+    <div class="rec"><p>Federal exchanges must be equal in value. An easement lowers the land's appraised value, so protected land would only trade for federal land worth that same lower amount.</p></div></div>
+  <div class="verdict"><div class="claim"><q>Easement records are public but hard to find, and the national map has been left to go stale.</q><span class="chip sup">Supported</span></div>
+    <div class="rec"><p>The National Conservation Easement Database says that "due to lack of funding, as of January 2025," it "is no longer being actively updated and supported." Utah requires easements to be recorded with the county but keeps no statewide list. Maine keeps one. When legislative staff briefed Utah lawmakers on easements in October 2024, the national database was the source they cited.</p></div></div>
+  <div class="verdict"><div class="claim"><q>Yosemite shows how a private party can get access to land inside a park.</q><span class="chip part">Partly supported</span></div>
+    <div class="rec"><p>The Interior Department has worked with a developer on a deal involving a strip of Yosemite for road access to a private development. It is real, and it is opposed in Congress. But no easement or tax deduction is documented as part of it, and no final decision has been announced.</p></div></div>
+</div>
+
+<div class="ex">
+  <div class="ex-h"><span class="n">Camp Williams buffer farms</span><span class="y">2020 · Eagle Mountain</span></div>
+  <div class="ex-b">
+    <span class="tag benefit">Public benefit</span>
+    <ul>
+      <li>The Defense Department's buffer program (REPI; the Army's version is called ACUB) pays willing landowners near bases not to develop, so homes don't crowd up against live-fire training areas.</li>
+      <li>In 2020, about 400 acres of the Smith family's farmland next to Camp Williams were protected. It was the third easement between the family and The Conservation Fund, together totaling more than 600 acres. Funders included the National Guard Bureau, the Defense Department's REPI program, USDA's farmland easement program and the State of Utah.</li>
+      <li>The Defense Department's Utah fact sheet lists about $51.5 million in combined funding and 2,443 acres protected at Camp Williams and Hill Air Force Base through fiscal 2021.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ex">
+  <div class="ex-h"><span class="n">Where the houses went: Saratoga Springs</span><span class="y">October 2023</span></div>
+  <div class="ex-b">
+    <span class="tag benefit">Public benefit</span><span class="tag question">Question to ask</span>
+    <p>Twenty acres in the Wildflower development, next to Camp Williams' field artillery firing points, had been planned for 57 homes. The land is becoming a Saratoga Springs cemetery instead, and the purchase was paid in full by the Army's buffer program.</p>
+    <div class="diagram" style="margin:10px 0">
+      <div class="cap">How the deal moved</div>
+      <pre class="mermaid">
+flowchart TD
+  A[Army ACUB buffer program] -->|federal funds| B[Herriman City, holder of the ACUB agreement]
+  B -->|secures 20 acres| C[Saratoga Springs cemetery]
+  D[Developer DAI, Wildflower development] -->|value of 57 planned homes| E[Other areas of the same development]
+      </pre>
+      <p class="alt">Text version: federal ACUB funds went through Herriman, which holds the program agreement, to secure the 20 acres for Saratoga Springs. The developer moved the value of the density to other parts of the development.</p>
+    </div>
+    <p><strong>The other hand:</strong> The city's release says the developer, DAI, moved "the value of the density from this 20-acre parcel to other areas within the development." The buffer is real, and Saratoga Springs residents didn't pay for the land. The open question is which parts of Wildflower absorbed that density, and when the city approved it.</p>
+  </div>
+</div>
+
+<h2 id="exchanges"><span class="num">02 · LAND EXCHANGES</span>Trading one parcel for another</h2>
+<p>At statehood, Congress gave Utah land to raise money for schools and other public institutions. These trust lands are scattered in a checkerboard across the state, and many ended up surrounded by national parks, forests and monuments where they can't earn money. The Trust Lands Administration is legally required to earn revenue from them, so it trades stranded parcels for federal land elsewhere.</p>
+
+<div class="diagram">
+  <div class="cap">How a federal land exchange moves</div>
+  <pre class="mermaid">
+flowchart TD
+  A[Exchange proposed] --> B[Public notice and comment]
+  B --> C[Appraisals: both sides must be equal in value]
+  C --> D[Environmental review]
+  D --> E[Decision: must serve the public interest]
+  E --> F[Protest period]
+  F --> G[Title changes hands]
+  X[Large trades] -.->|Congress passes a law instead| G
+  </pre>
+  <p class="alt">Text version: an exchange is proposed, opened to public comment, appraised on both sides, reviewed for environmental effects, decided on a public-interest finding, opened to protest, and then completed. Large trades are often set by Congress directly.</p>
+</div>
+
+<div class="tbl-wrap"><table>
+  <tr><th>Federal exchange rule</th><th>What it means</th></tr>
+  <tr><td class="first">Equal value</td><td>Both sides must be appraised at roughly the same value.</td></tr>
+  <tr><td class="first">Cash cap</td><td>Cash can make up no more than 25% of the federal land's value.</td></tr>
+  <tr><td class="first">Public interest</td><td>The federal agency must find the trade serves the public.</td></tr>
+  <tr><td class="first">Same state</td><td>Both parcels must be in the same state.</td></tr>
+</table></div>
+
+<p>Two of the biggest exchanges in Utah history came directly out of national monuments.</p>
+
+<div class="ex">
+  <div class="ex-h"><span class="n">The Grand Staircase exchange</span><span class="y">1998 · Statewide</span></div>
+  <div class="ex-b">
+    <span class="tag benefit">Public benefit</span><span class="tag question">Question to ask</span>
+    <ul>
+      <li>When President Clinton created Grand Staircase-Escalante in 1996, about 176,000 acres of school trust land were inside it.</li>
+      <li>Gov. Mike Leavitt and Interior Secretary Bruce Babbitt negotiated a trade that Congress approved in 1998. Utah gave up trust land inside the monument, Indian reservations, national parks and forests, and received federal land elsewhere, coal tracts and $50 million.</li>
+      <li>President Clinton called it the largest land exchange in the history of the lower 48 states.</li>
+    </ul>
+    <p><strong>The other hand:</strong> The land Utah received includes the Drunkard's Wash natural-gas field and land that now hosts the ACES Delta energy project, the Wasatch Regional Landfill and solar farms. The trade made the school trust much richer.</p>
+    <details><summary>Sources disagree on the acreage</summary>
+      <div class="tbl-wrap" style="margin:6px 0 10px"><table>
+        <tr><th>Source</th><th>Utah gave up</th><th>Utah received</th></tr>
+        <tr><td>Utah Trust Lands Administration website</td><td>409,000 acres</td><td>119,000 acres, coal tracts, $50M</td></tr>
+        <tr><td>Congressional Senate report, 1998</td><td>About 376,739 surface acres and 442,719 subsurface acres</td><td>Coal tracts, about 3,640 acres of commercial land, up to $50M in royalties, other land</td></tr>
+        <tr><td>Deseret News, 1998</td><td>376,000 acres</td><td>About 140,000 acres, coal and gas leases, $50M</td></tr>
+      </table></div>
+      <p class="small">The differences likely reflect what each source counts (surface vs. mineral acres, and changes made as the deal was finalized). We show all three rather than pick one.</p>
+    </details>
+  </div>
+</div>
+
+<div class="ex">
+  <div class="ex-h"><span class="n">The Bears Ears exchange that fell apart</span><span class="y">2022–2024 · San Juan County</span></div>
+  <div class="ex-b">
+    <span class="tag status">Never completed</span><span class="tag question">Question to ask</span>
+    <ul>
+      <li>About 130,000 acres of trust land sat inside Bears Ears. The state, the federal government and the five tribes of the Bears Ears Commission agreed on a trade of about 162,500 state acres for about 167,500 federal acres.</li>
+      <li>The Legislature approved it in 2023, and bills advanced in both chambers of Congress.</li>
+      <li>In February 2024, Gov. Spencer Cox withdrew. H.J.R. 26 formally rejected the trade, passing the House 56-13 and the Senate 20-6. State leaders cited the federal management plan and "lack of coordination with the state."</li>
+    </ul>
+    <p><strong>The other hand:</strong> State leaders said they'd reopen talks when the federal government was ready. In July 2026, most of the monument was removed by proclamation instead (see section 4), and much of the trust land that would have been traded is now outside the monument.</p>
+  </div>
+</div>
+
+<div class="ex">
+  <div class="ex-h"><span class="n">The Emery County exchange</span><span class="y">Completed Feb. 22, 2025</span></div>
+  <div class="ex-b">
+    <span class="tag benefit">Public benefit</span><span class="tag question">Question to ask</span>
+    <ul>
+      <li>Required by the 2019 Dingell Act, which created new wilderness and recreation areas in Emery County.</li>
+      <li>The BLM received about 116,042 acres of isolated state land. Utah received 47 water rights; about 83,000 acres including the minerals underneath; about 4,000 surface-only acres; and about 5,000 acres of minerals only, across 18 counties.</li>
+      <li>The BLM says Utah's new land holds about 32 million tons of recoverable coal, 2.5 million barrels of oil and 25,800 million cubic feet of natural gas, and can be used for housing, recreation, grazing and critical minerals.</li>
+      <li>Signed by Interior Secretary Doug Burgum, Gov. Cox, Sen. John Curtis, the acting BLM director and Trust Lands Director Michelle McConkie.</li>
+    </ul>
+    <p><strong>The other hand:</strong> Who ends up leasing, buying or developing that land is decided by the Trust Lands board, and its decisions are public.</p>
+  </div>
+</div>
+
+<h2 id="transfers"><span class="num">03 · TRANSFERS</span>Handing land over outright</h2>
+<p>Only Congress can give federal land away. Small, specific transfers happen quietly. The two big attempts in recent years were both stopped before anyone ruled on whether they were a good idea.</p>
+
+<div class="ex">
+  <div class="ex-h"><span class="n">Utah State Parks Adjustment Act</span><span class="y">Transferred Aug. 19, 2025 · 618 acres</span></div>
+  <div class="ex-b">
+    <span class="tag benefit">Public benefit</span>
+    <ul>
+      <li>Under Public Law 118-181, the BLM moved 618 acres of isolated parcels to the state: 329 acres to Antelope Island State Park and 289 to Wasatch Mountain State Park.</li>
+      <li>The BLM said the change allows "more consistent management" by Utah State Parks.</li>
+    </ul>
+  </div>
+</div>
+
+<h3>The two big attempts, side by side</h3>
+<div class="tbl-wrap"><table>
+  <tr><th></th><th>Utah v. United States</th><th>Sen. Mike Lee's land-sale provision</th></tr>
+  <tr><td class="first">When</td><td>Filed August 2024</td><td>June 2025, in the federal budget bill</td></tr>
+  <tr><td class="first">What it sought</td><td>A ruling that the federal government can't keep about 18.5 million acres of "unappropriated" BLM land in Utah indefinitely. Excluded parks, monuments, wilderness, national forests, tribal and military land.</td><td>Sale of 0.5% to 0.75% of BLM and Forest Service land in 11 Western states over five years, about 2.2 to 3.3 million acres. Later narrowed to BLM land within 5 miles of towns, for housing.</td></tr>
+  <tr><td class="first">Stated reason</td><td>Gov. Cox said federal control of two-thirds of Utah limits the state's ability "to actively manage and protect our natural resources." State leaders cited less red tape, faster permitting and more local tax revenue.</td><td>Housing for families. Lee added protections for farmers, ranchers and recreation users when he narrowed it.</td></tr>
+  <tr><td class="first">Who backed it</td><td>Sen. Lee; Idaho, Wyoming and Iowa filed briefs in support.</td><td>Sen. Lee.</td></tr>
+  <tr><td class="first">Who objected</td><td>Conservation groups, which warned of damage and a path to sales; Democratic leaders, who questioned the cost of state management.</td><td>Republican Sens. Daines and Sheehy (Montana) and Crapo and Risch (Idaho); five House Republicans, including Ryan Zinke and Mike Simpson; hunting and fishing groups, with nearly 115,000 calls and emails logged by Backcountry Hunters &amp; Anglers.</td></tr>
+  <tr><td class="first">What happened</td><td>On Jan. 13, 2025, the Supreme Court declined to take the case, without explanation. State officials said in July 2025 that refiling in a lower court was under consideration.</td><td>The parliamentarian ruled the first version didn't fit budget-bill rules. Lee withdrew it June 28, 2025, saying he couldn't guarantee the land would go "only to American families—not China, not to BlackRock."</td></tr>
+</table></div>
+
+<h2 id="monuments"><span class="num">04 · MONUMENT BOUNDARIES</span>Redrawing the lines</h2>
+<p>The 1906 Antiquities Act lets a president protect federal land as a national monument. It doesn't say whether a later president can shrink one, and no court has settled that. Grand Staircase-Escalante and Bears Ears are the test case: each has been cut, restored and cut again since 2017.</p>
+
+<div class="viz" id="monviz">
+  <div class="viz-h">
+    <div class="viz-title">How big is the monument?</div>
+    <div class="toggle" role="group" aria-label="Choose monument">
+      <button type="button" data-m="be" aria-pressed="true">Bears Ears</button>
+      <button type="button" data-m="gs" aria-pressed="false">Grand Staircase</button>
+    </div>
+  </div>
+  <div class="bars" id="bars"></div>
+  <p class="viz-cap">Approximate acreage from the presidential proclamations. Grand Staircase grew after 1996 as state land inside it was traded to the federal government. Gold bars are designations and restorations; red bars are reductions.</p>
+</div>
+
+<div class="ex">
+  <div class="ex-h"><span class="n">The July 2026 reductions</span><span class="y">In effect since Sept. 11, 2026</span></div>
+  <div class="ex-b">
+    <span class="tag status">In court</span><span class="tag question">Question to ask</span>
+    <ul>
+      <li>On July 13, 2026, President Trump signed proclamations cutting Bears Ears to about 121,100 acres and Grand Staircase-Escalante to about 181,500 acres, more than a 90% reduction for each. Gov. Cox, Sens. Lee and Curtis, and House Speaker Mike Schultz stood behind him at the signing.</li>
+      <li>The White House said the objects worth protecting stay inside the smaller boundaries and the rest returns to "multiple use." News reports on its fact sheet say it named uranium, vanadium, copper and other minerals.</li>
+      <li>The proclamation also ended the Bears Ears Commission, the five tribes' formal role in managing the monument.</li>
+      <li>The removed land opened to new mining claims on Sept. 11. San Juan County recorder data shows 16 claims filed that day.</li>
+      <li>On Sept. 2, conservation groups, tribal organizations and businesses asked a federal court to reopen their 2017 lawsuits. Separately, in June 2026 a federal appeals court revived Utah's own lawsuit against the 2021 restoration.</li>
+    </ul>
+    <p><strong>The other hand:</strong> Filing a mining claim is a first step, not permission to dig. Permits can take years. But claims are public records, so anyone can watch who files and where.</p>
+  </div>
+</div>
+
+<h3>Who pays what</h3>
+<p>We found no case of public land being handed over for free. But the price depends on which door a company comes through.</p>
+<div class="tbl-wrap"><table>
+  <tr><th>How it happens</th><th>What the company or buyer pays</th><th>Who keeps the land</th></tr>
+  <tr><td class="first">Hardrock mining claim (uranium, vanadium, copper)</td><td>Filing fees and a yearly fee per claim. <strong>The 1872 Mining Law charges no federal royalty on hardrock minerals.</strong></td><td>The public. Buying claimed land outright (a "patent," set in law at $2.50–$5 an acre) has been blocked by Congress since Oct. 1, 1994.</td></tr>
+  <tr><td class="first">Oil and gas lease</td><td>A winning auction bid, yearly rent, and a royalty on production (12.5% for every parcel in the next Utah sale).</td><td>The public.</td></tr>
+  <tr><td class="first">Trust land sale</td><td>The auction price. The Trust Lands Administration must seek full value for the schools and institutions it serves.</td><td>The buyer.</td></tr>
+  <tr><td class="first">Federal exchange</td><td>Land of equal appraised value.</td><td>Each side gets the other's land.</td></tr>
+  <tr><td class="first">Purchased easement</td><td>The program pays the owner.</td><td>The owner, with development rights given up.</td></tr>
+</table></div>
+
+<div class="callout"><p><strong>How the monuments connect to the trust lands:</strong> The monuments shaped every exchange in this explainer. The 1998 trade happened because of Grand Staircase. The Bears Ears trade was proposed because of Bears Ears, and the state withdrew from it in 2024. Now much of the land the state once wanted to trade out of is outside the monument. What the Trust Lands Administration plans for those parcels is a question for its public board meetings.</p></div>
+
+<div class="ex">
+  <div class="ex-h"><span class="n">Open now: the BLM's next Utah oil and gas lease sale</span><span class="y">Comments close Oct. 19, 2026</span></div>
+  <div class="ex-b">
+    <span class="tag status">Public comment open</span>
+    <ul>
+      <li>Leasing means the government keeps the land but sells the right to drill it.</li>
+      <li>The BLM's preliminary list for the March 24, 2027 sale has 54 parcels covering 58,600.68 acres. Every parcel carries a 12.5% royalty rate.</li>
+      <li>Comments are taken online through BLM ePlanning until 11:59 p.m. Mountain time on Oct. 19, 2026. Comments sent any other way won't be accepted. Project number: DOI-BLM-UT-0000-2026-0009-EA.</li>
+    </ul>
+    <div class="viz" style="margin:10px 0">
+      <div class="viz-title">Acres nominated, by county</div>
+      <div class="bars" id="leasebars"></div>
+      <p class="viz-cap">From the BLM's preliminary parcel list. Emery parcels are in the Price field office, Uintah in Vernal, Grand in Moab.</p>
+    </div>
+    <p><strong>What the list shows:</strong> None of the parcels are in San Juan, Kane or Garfield counties, where the two monuments are. More than half the acreage is in one part of Emery County and traces to a small group of nominations. Ten parcels are "split estate," where someone else owns the surface and the federal government owns the minerals underneath.</p>
+    <p><strong>The other hand:</strong> The list gives nomination numbers, not who nominated the parcels. The project's maps show where each parcel is and what's nearby.</p>
+  </div>
+</div>
+
+<h3>The national example: Yosemite</h3>
+<p>The clearest current example of a private deal involving protected land isn't in Utah. The Interior Department has been working with a developer, Kingsbarn Realty Capital, on a deal involving a quarter-mile strip of Yosemite National Park for road access to a planned 83-acre private development next to it. More than 150 members of Congress from both parties signed a letter opposing it, and Senate appropriators left it off their list of funded projects. No final decision has been announced. We found no similar private exchange pending for Utah in Congress.</p>
+
+<h2 id="laws"><span class="num">THE LAWS UNDERNEATH</span>State bills that changed the rules</h2>
+<p>These Utah bills shaped the ground rules for land, water, mining and public records in recent years. Each bill is graded on our standing five-part rubric: power, transparency, financial accountability, environmental impact and community impact.</p>
+<p class="small">Pow. = power · Trans. = transparency · Fin. = financial accountability · Env. = environmental impact · Comm. = community impact. Linked bills open their full Bill-Tracker case file; "—" means the category grades are on that case file.</p>
+<div class="tbl-wrap"><table class="grades">
+  <tr><th>Bill</th><th>What it changed</th><th title="Power">Pow.</th><th title="Transparency">Trans.</th><th title="Financial accountability">Fin.</th><th title="Environmental impact">Env.</th><th title="Community impact">Comm.</th><th>Overall</th></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb491.html">H.B. 491 (2023)</a></td><td>Created the Great Salt Lake Commissioner, with water rights left outside the office's authority, and added a public-records exemption covering certain water-rights records.</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc"><span class="grade g-F">F</span></td></tr>
+  <tr><td class="first">H.B. 353 (2024)</td><td>Replaced the objection-and-hearing step for large mining permits with set review deadlines, a 30-day public comment period and a new board review. Only people who comment on time can intervene later.</td><td class="gc"><span class="grade g-C">C−</span></td><td class="gc"><span class="grade g-B">B−</span></td><td class="gc"><span class="grade g-C">C</span></td><td class="gc"><span class="grade g-C">C</span></td><td class="gc"><span class="grade g-D">D+</span></td><td class="gc"><span class="grade g-C">C</span></td></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb373.html">H.B. 373 (2024)</a></td><td>Repealed the Air Quality Policy Advisory Board.</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc"><span class="grade g-D">D</span></td></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb169.html">S.B. 169 (2024)</a></td><td>Widened where MIDA can charge its lodging tax, let it add a resort sales tax without a public vote, and ended physical posting of its meeting notices. The fiscal note shows up to $421,800 a year backfilled from the Uniform School Fund.</td><td class="gc"><span class="grade g-D">D</span></td><td class="gc"><span class="grade g-C">C−</span></td><td class="gc"><span class="grade g-C">C−</span></td><td class="gc">N/A</td><td class="gc"><span class="grade g-C">C</span></td><td class="gc"><span class="grade g-C">C−</span></td></tr>
+  <tr><td class="first">H.J.R. 26 (2024)</td><td>Rejected the Bears Ears trust-land exchange the state, federal government and five tribes had agreed to.</td><td class="gc"><span class="grade g-C">C</span></td><td class="gc"><span class="grade g-B">B−</span></td><td class="gc"><span class="grade g-C">C−</span></td><td class="gc">N/A</td><td class="gc"><span class="grade g-D">D</span></td><td class="gc"><span class="grade g-C">C−</span></td></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb207.html">S.B. 207 (2025)</a></td><td>Replaced counties' own oil and gas road-impact fees with a smaller, time-limited state tax, after Duchesne County adopted one.</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc"><span class="grade g-F">F</span></td></tr>
+  <tr><td class="first">S.B. 277 (2025)</td><td>Replaced the seven-member citizen State Records Committee with one appointed director. Kept the "balancing test" that lets records be released in the public interest, and kept court review.</td><td class="gc"><span class="grade g-C">C</span></td><td class="gc"><span class="grade g-B">B−</span></td><td class="gc"><span class="grade g-C">C</span></td><td class="gc">N/A</td><td class="gc"><span class="grade g-C">C</span></td><td class="gc"><span class="grade g-C">C</span></td></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb60.html">H.B. 60 (2026)</a></td><td>Narrowed the "public welfare" reasons the State Engineer can use to deny a water-rights application.</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc"><span class="grade g-D">D</span></td></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb546.html">H.B. 546 (2026)</a></td><td>Declares Utah keeps legislative jurisdiction over most federally controlled land in the state, and creates statewide mapping of federal lands.</td><td class="gc"><span class="grade g-D">D</span></td><td class="gc"><span class="grade g-C">C</span></td><td class="gc"><span class="grade g-B">B</span></td><td class="gc"><span class="grade g-D">D</span></td><td class="gc"><span class="grade g-C">C</span></td><td class="gc"><span class="grade g-C">C−</span></td></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb254.html">S.B. 254 (2026)</a></td><td>Created critical minerals zones, fast-track permitting and a Critical Minerals Council with a seat for the mining association's president. Retitled late in the session.</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc"><span class="grade g-D">D</span></td></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb12.html">S.B. 12 (2026)</a></td><td>Extended dozens of program sunset dates, but not the Air Conservation, Safe Drinking Water, Water Quality or Solid and Hazardous Waste Acts, which are set to sunset in 2029.</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc"><span class="grade g-F">F</span></td></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb17.html">H.B. 17 (2026)</a></td><td>Requires PID boards to meet inside their districts, with a broad exception and no penalty.</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc"><span class="grade g-F">F</span></td></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb507.html">H.B. 507 (2026)</a></td><td>New protected-records category for economic-development deals, and limits on data-center incentives with large exceptions. Also a new public reporting database and a rule that every surface owner must consent before a PID's tax ceiling rises.</td><td class="gc"><span class="grade g-D">D</span></td><td class="gc"><span class="grade g-C">C</span></td><td class="gc"><span class="grade g-B">B−</span></td><td class="gc"><span class="grade g-D">D</span></td><td class="gc"><span class="grade g-C">C</span></td><td class="gc"><span class="grade g-C">C−</span></td></tr>
+</table></div>
+
+<h3>Bills that cut the other way</h3>
+<div class="tbl-wrap"><table class="grades">
+  <tr><th>Bill</th><th>What it changed</th><th title="Power">Pow.</th><th title="Transparency">Trans.</th><th title="Financial accountability">Fin.</th><th title="Environmental impact">Env.</th><th title="Community impact">Comm.</th><th>Overall</th></tr>
+  <tr><td class="first">H.B. 76 (2026)</td><td>Requires new data centers of 10,000+ square feet drawing 75+ acre-feet a year to report water use. Each facility's withdrawal is published; discharge and conservation details can be kept confidential and released only as county totals. Applies to centers that begin operating on or after July 1, 2026.</td><td class="gc"><span class="grade g-C">C</span></td><td class="gc"><span class="grade g-B">B</span></td><td class="gc">N/A</td><td class="gc"><span class="grade g-D">D</span></td><td class="gc"><span class="grade g-C">C</span></td><td class="gc"><span class="grade g-C">C</span></td></tr>
+  <tr><td class="first">H.B. 502 (2024)</td><td>Introduced as a statewide override of local zoning for mining; cut to a study after a mayor, the Utah League of Cities and Towns and citizens pushed back.</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc"><span class="grade g-B">B</span></td></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb349.html">H.B. 349 (2026)</a></td><td>Would have made real water-storage loans. Died at midnight on the last night of the session without a final vote.</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc"><span class="grade g-B">B</span></td></tr>
+  <tr><td class="first">H.B. 422 (2026)</td><td>Would have required PID trustee conflict-of-interest disclosure and created a PID dissolution process. Passed the House 66-1-8; died at midnight without a Senate floor vote.</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc">—</td><td class="gc"><span class="grade g-A">A</span></td></tr>
+</table></div>
+
+<h2 id="pattern"><span class="num">THE PATTERN</span>What passes, and what doesn't</h2>
+<p>We've graded 50 bills with a final outcome in our full <a href="https://weber-county-hive.github.io/Bill-Tracker/water-land-property-rights-local-power-bills.html">Bill-Tracker</a>, all touching land, water, taxes or local control. When you line up each grade against what happened to the bill, a pattern shows up.</p>
+<div class="bigthree">
+  <div><b>26 of 30</b>bills we graded D or F became law.</div>
+  <div><b>6 of 10</b>bills we graded A or B did not.</div>
+  <div><b>10 of 10</b>bills we graded C became law.</div>
+</div>
+<div class="pattern" aria-label="Bills by grade and outcome">
+  <div class="viz-title">Bills by grade: became law vs. died</div>
+<div class="prow"><div class="pg"><span class="grade g-A">A</span></div><div class="ptrack"><span class="seg pp" style="width:11.76%" title="2 became law">2</span><span class="seg pd" style="width:11.76%" title="2 died">2</span></div></div>
+<div class="prow"><div class="pg"><span class="grade g-B">B</span></div><div class="ptrack"><span class="seg pp" style="width:11.76%" title="2 became law">2</span><span class="seg pd" style="width:23.53%" title="4 died">4</span></div></div>
+<div class="prow"><div class="pg"><span class="grade g-C">C</span></div><div class="ptrack"><span class="seg pp" style="width:58.82%" title="10 became law">10</span></div></div>
+<div class="prow"><div class="pg"><span class="grade g-D">D</span></div><div class="ptrack"><span class="seg pp" style="width:82.35%" title="14 became law">14</span><span class="seg pd" style="width:11.76%" title="2 died">2</span><span class="seg pv" style="width:5.88%" title="1 vetoed">1</span></div></div>
+<div class="prow"><div class="pg"><span class="grade g-F">F</span></div><div class="ptrack"><span class="seg pp" style="width:70.59%" title="12 became law">12</span><span class="seg pd" style="width:5.88%" title="1 died">1</span></div></div>
+  <div class="pkey"><span><i style="background:#0A0A0A"></i>Became law</span><span><i style="background:#BDB39F"></i>Died</span><span><i style="background:#fff"></i>Vetoed</span></div>
+</div>
+
+<h3>How the good ones died</h3>
+<p>None of the six were voted down after a debate. Most had already cleared committees, and some had passed one chamber by wide margins. They ran out of road instead.</p>
+<div class="tbl-wrap"><table>
+  <tr><th>Bill</th><th>Grade</th><th>How far it got</th><th>How it died</th></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/water-land-property-rights-local-power-bills.html">H.B. 422 (2026)</a></td><td><span class="grade g-A">A</span></td><td>PID conflict-of-interest disclosure and dissolution. Passed the House 66-1-8 and a Senate committee 5-0-2.</td><td>Enacting clause struck at 11:59 p.m. on the last night. No Senate floor vote.</td></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb188-lease-revenue-bonds.html">H.B. 332 (2026)</a></td><td><span class="grade g-A">A</span></td><td>Got a real committee hearing and a unanimous favorable recommendation.</td><td>Held by the same committee in the same meeting, then struck at midnight.</td></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb349.html">H.B. 349 (2026)</a></td><td><span class="grade g-B">B</span></td><td>Water-storage loans. Passed a House committee 11-0-3, the House 63-1-11 and a Senate committee 4-0-3.</td><td>Struck at midnight. No Senate floor vote.</td></tr>
+  <tr><td class="first"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hjr7.html">H.J.R. 7 (2026)</a></td><td><span class="grade g-B">B</span></td><td>Would have asked voters to raise the residential property-tax exemption from 45% to 60% of value.</td><td>Never got a committee vote; struck at midnight.</td></tr>
+  <tr><td class="first">H.B. 120 (2006)</td><td><span class="grade g-B">B</span></td><td>Would have kept a local law on hold while a referendum on it was pending. Passed committee 8-0-3.</td><td>Failed on the House floor 27-46, with no one speaking for or against it.</td></tr>
+  <tr><td class="first">S.B. 66 (2013)</td><td><span class="grade g-B">B</span></td><td>The same referendum fix. Passed the Senate 27-1.</td><td>The House struck its enacting clause with no recorded vote.</td></tr>
+</table></div>
+
+<h3>How the low-graded ones passed</h3>
+<p>Most D- and F-graded bills passed by wide margins, several unanimously. A few changed after lawmakers had already voted on them.</p>
+<ul>
+  <li><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb12.html"><strong>S.B. 12 (2026)</strong></a> was voted on in committee and on the Senate floor as a narrow one-item bill. It grew into a 16-item bill afterward, and we found no recorded vote on the expanded version before it became law.</li>
+  <li><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb254.html"><strong>S.B. 254 (2026)</strong></a> passed both floors as "Critical Minerals Amendments." It was retitled and changed within about nine hours on March 5, after those votes.</li>
+  <li><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb475.html"><strong>H.B. 475 (2026)</strong></a> lost a required oversight work group in a floor substitute adopted two minutes before final passage.</li>
+  <li><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb17.html"><strong>H.B. 17 (2026)</strong></a> passed unanimously at every stage.</li>
+</ul>
+
+<div class="callout"><p><strong>Making sense of it:</strong> A bill has to clear every step to become law, but it can die at any one of them, and often quietly. In the last days of a session, the bills that get a floor vote are the ones leadership puts on the calendar. Anything still waiting at midnight on the final night dies automatically when its enacting clause is struck. That means a bill can have broad, recorded support and still die without anyone voting against it or explaining why. Bills that change late can pass before the public, or sometimes the lawmakers who voted earlier, see the final version.</p>
+<p>The record shows <em>how</em> these bills passed or died. It doesn't show <em>why</em>, and we don't assume motives.</p></div>
+
+<p class="small"><strong>Read this with care:</strong> These are bills we chose to track because they touched land, water, taxes and local control. They are not a random sample of everything the Legislature passes, and the grades are ours, from our fixed rubric. Good bills do pass: H.B. 163 (2020), H.B. 55 (2025), and H.B. 52 and H.B. 75 (2026) were all graded A or B and became law. Counts use the grades on the full tracker as of Sept. 23, 2026; H.B. 60 and H.B. 76 are counted as F there, and both grades are under review.</p>
+
+<h2 id="timeline"><span class="num">TIMELINE</span>Thirty years of Utah land decisions</h2>
+<div class="tl" id="tl">
+  <div class="tl-dots" role="tablist" aria-label="Timeline years" id="tldots"></div>
+  <div class="tl-panel" id="tlpanel" role="tabpanel" aria-live="polite"></div>
+  <div class="legend"><span><i style="background:#D4AF37"></i>Exchange</span><span><i style="background:#A63D2F"></i>Monument change</span><span><i style="background:#35607F"></i>Transfer, lawsuit or leasing</span><span><i style="background:#3E7A4F"></i>Easement or buffer</span></div>
+</div>
+
+<h2 id="questions"><span class="num">QUESTIONS WORTH ASKING</span>Watching the other hand</h2>
+<p>None of these assume wrongdoing. They're questions any land deal should be able to answer in public. Tap a card to see where to look.</p>
+<div class="flips">
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 01</span><span class="t">Who appraised the land on each side, and is the appraisal public?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>Exchange decision documents on BLM ePlanning; Trust Lands board packets for state sales.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 02</span><span class="t">If development rights were given up, did the density move somewhere else?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>City council minutes and development agreements. In Saratoga Springs, the Wildflower development agreement and its amendments.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 03</span><span class="t">Was the easement bought with public money or donated for a tax deduction?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>The recorded easement at the county recorder names the landowner and the holder. Program announcements name public funders.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 04</span><span class="t">Who is filing mining claims on land removed from the monuments?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>BLM's MLRS claim search, and the San Juan, Kane and Garfield county recorders.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 05</span><span class="t">Who nominated 30,000 acres in Emery County for the next lease sale?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>The lease-sale project on BLM ePlanning (DOI-BLM-UT-0000-2026-0009-EA), including its maps and documents tabs.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 06</span><span class="t">What will Trust Lands do with its parcels now outside Bears Ears and Grand Staircase?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>Trust Lands board agendas and minutes at trustlands.utah.gov.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 07</span><span class="t">Who gets the water rights and minerals the state received in trades, and on what terms?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>Trust Lands lease and sale decisions, and Division of Water Rights records for each water right.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 08</span><span class="t">With no state list, how do I find easements near me?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>Your county recorder's parcel search. The national database still shows easements recorded before 2025, but it is no longer updated.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+</div>
+
+<h2><span class="num">LOOK IT UP YOURSELF</span>Where the paperwork lives</h2>
+<div class="lookup">
+  <div class="lk"><a href="https://trustlands.utah.gov/">Trust Lands Administration</a>Board agendas, minutes, sales and leases.</div>
+  <div class="lk"><a href="https://eplanning.blm.gov/">BLM ePlanning</a>Lease sales, exchanges and management plans, with maps and comment deadlines.</div>
+  <div class="lk"><a href="https://mlrs.blm.gov/">BLM MLRS</a>Federal mining claims, searchable by location.</div>
+  <div class="lk"><a href="https://le.utah.gov/">Utah Legislature</a>Every bill's versions, votes and fiscal note.</div>
+  <div class="lk"><a href="https://www.congress.gov/">Congress.gov</a>Federal bills that move land in Utah.</div>
+  <div class="lk"><a href="https://www.federalregister.gov/">Federal Register</a>Monument proclamations and land notices.</div>
+  <div class="lk"><a href="https://waterrights.utah.gov/data-centers/">Utah Division of Water Rights</a>Annual data-center water reports under H.B. 76.</div>
+  <div class="lk"><a href="https://www.conservationeasement.us/">National Conservation Easement Database</a>Easements recorded before 2025. No longer updated.</div>
+</div>
+
+<h2 id="conclusion"><span class="num">CONCLUSION</span>What the record shows</h2>
+<div class="kd">
+  <div class="know"><h4>What we know</h4><ul>
+    <li>Nearly 3 million acres left monument protection in July 2026, and mining claims were filed the day the change took effect.</li>
+    <li>Utah's biggest land trades were driven by the monuments, and they made the school trust richer.</li>
+    <li>The two largest recent attempts to move federal land to the state or to buyers were stopped: one declined by the Supreme Court, one withdrawn before a vote.</li>
+    <li>Federal law charges no royalty on hardrock minerals from federal land.</li>
+    <li>Of the bills we track, 26 of 30 graded D or F became law, while 6 of 10 graded A or B died, none after a floor debate.</li>
+    <li>Utah keeps no statewide list of conservation easements, and the national one stopped updating in January 2025.</li>
+  </ul></div>
+  <div class="dont"><h4>What we don't know yet</h4><ul>
+    <li>Whether the courts will restore the monuments.</li>
+    <li>Who nominated the Emery County lease parcels.</li>
+    <li>What Trust Lands plans for its parcels now outside the monuments.</li>
+    <li>Where the Saratoga Springs density went, and when it was approved.</li>
+    <li>Whether Utah will refile its public-lands lawsuit, and whether the Yosemite deal goes forward.</li>
+  </ul></div>
+</div>
+<div class="bottomline"><div class="k">Bottom line</div><p>Most of these deals followed the law, and several did real public good. The pattern worth watching isn't any single deal. It's how much of the decision-making happens in documents few people read. Every item on this page came from a public record, and the questions above can be answered the same way.</p></div>
+
+<details class="src">
+  <summary>Sources (grouped by section)</summary>
+  <div class="inner">
+  <p class="how">"Read as" notes how each source was checked: web page, PDF, or a copy provided to us.</p>
+  <h5>Easements</h5>
+  <ol>
+    <li>Internal Revenue Code §170(b)(1)(E) and §170(h)(7) (SECURE 2.0 Act of 2022), deduction limits.</li>
+    <li><a href="https://www.conservationeasement.us/">National Conservation Easement Database</a>, funding notice. <span class="how">Read as web page.</span></li>
+    <li><a href="https://le.utah.gov/xcode/Title57/Chapter18/C57-18_1800010118000101.pdf">Utah Code §57-18-4, Land Conservation Easement Act</a>. <span class="how">Read as PDF.</span></li>
+    <li><a href="https://le.utah.gov/~2011/bills/hbillenr/HB0156.htm">H.B. 156 (2011), Assessment of Property with Conservation Easement</a>. <span class="how">Read as web page.</span></li>
+    <li><a href="https://le.utah.gov/interim/2025/pdf/Conservation_Easements.pdf">Office of Legislative Research and General Counsel, "Conservation Easements," Oct. 15, 2024</a>. <span class="how">Read as PDF.</span></li>
+    <li>Maine Revised Statutes, Title 33, §479-C.</li>
+    <li><a href="https://www.deseret.com/utah/2020/4/28/21231145/conservation-success-protecting-utah-farmland-wildlife-camp-williams/">"Conservation deal protects Utah farmland, wildlife and Camp Williams," Deseret News, April 28, 2020</a>. <span class="how">Read as web page.</span></li>
+    <li><a href="https://www.conservationfund.org/our-impact/news-insights/military-readiness-balances-with-utah-community-growth/">The Conservation Fund, "Military Readiness Balances with Utah Community Growth," April 22, 2020</a>. <span class="how">Read as web page.</span></li>
+    <li><a href="https://www.repi.mil/Portals/44/Documents/State_Packages/Utah_ALLFacts.pdf">U.S. Department of Defense, REPI Utah fact sheet</a>. <span class="how">Read as PDF.</span></li>
+    <li><a href="https://www.saratogasprings-ut.gov/DocumentCenter/View/12458/1032023-Cemetery-Land-Acquisition---Utah-National-Guard-Press-Release">City of Saratoga Springs, Press Release 23-031, Oct. 3, 2023</a>. <span class="how">Read as PDF.</span></li>
+    <li><a href="https://www.heraldextra.com/news/local/2023/nov/01/saratoga-springs-cemetery-to-be-built-next-to-camp-williams/">"Saratoga Springs cemetery to be built next to Camp Williams," Daily Herald, Nov. 1, 2023</a>. <span class="how">Read as web page.</span></li>
+  </ol>
+  <h5>Exchanges</h5>
+  <ol start="12">
+    <li>Federal Land Policy and Management Act, 43 U.S.C. §1716.</li>
+    <li><a href="https://trustlands.utah.gov/about-us/care-preservation/land-transfers-exchanges/">Utah Trust Lands Administration, "Land Transfers &amp; Exchanges"</a>. <span class="how">Read as web page.</span></li>
+    <li><a href="https://www.congress.gov/bill/105th-congress/house-bill/3830">Utah Schools and Lands Exchange Act of 1998 (Public Law 105-335)</a>; <a href="https://www.congress.gov/committee-report/105th-congress/senate-report/331">Senate Report 105-331</a>; House Report 105-598.</li>
+    <li><a href="https://www.presidency.ucsb.edu/documents/statement-signing-the-utah-schools-and-land-exchange-act-1998">President Clinton, signing statement, Oct. 31, 1998</a>.</li>
+    <li><a href="https://www.deseret.com/1998/6/10/19385045/hatch-introduces-bill-to-formalize-state-trust-lands-exchange/">"Hatch introduces bill to formalize state trust lands exchange," Deseret News, June 10, 1998</a>.</li>
+    <li><a href="https://utahnewsdispatch.com/2024/02/06/utah-terminates-bears-ears-land-swap-with-blm/">"Tension between feds and state will likely sink 160,000-acre Bears Ears land swap," Utah News Dispatch, Feb. 6, 2024</a>.</li>
+    <li><a href="https://le.utah.gov/~2024/bills/static/HJR026.html">H.J.R. 26 (2024), status and votes</a>. <span class="how">Read as web page.</span></li>
+    <li><a href="https://www.blm.gov/press-release/landmark-dingell-act-land-exchange-completed">BLM, "Landmark Dingell Act land exchange completed," Feb. 22, 2025</a>. <span class="how">Read as web page.</span></li>
+  </ol>
+  <h5>Transfers</h5>
+  <ol start="20">
+    <li><a href="https://www.blm.gov/press-release/blm-transfers-over-600-public-acres-utah-division-state-parks">BLM, "BLM transfers over 600 public acres to Utah Division of State Parks," Aug. 19, 2025</a>.</li>
+    <li><a href="https://governor.utah.gov/press/news-release-utah-files-landmark-lawsuit-challenging-federal-control-over-most-blm-land/">Office of Gov. Spencer Cox, "Utah files landmark lawsuit challenging federal control over most BLM land"</a>.</li>
+    <li><a href="https://utahnewsdispatch.com/2025/01/13/us-supreme-court-will-not-hear-utah-public-land-lawsuit/">"U.S. Supreme Court will not hear Utah's lawsuit," Utah News Dispatch, Jan. 13, 2025</a>.</li>
+    <li><a href="https://www.fox13now.com/news/politics/utah-may-ultimately-abandon-lawsuit-over-control-of-public-lands">"Utah may ultimately abandon lawsuit over control of public lands," Fox 13, July 2025</a>.</li>
+    <li><a href="https://www.deseret.com/politics/2025/06/24/mike-lee-changes-public-lands-proposal/">"Mike Lee makes major changes to public lands proposal," Deseret News, June 24, 2025</a>.</li>
+    <li><a href="https://www.themeateater.com/conservation/public-lands-and-waters/facing-mounting-pressure-mike-lee-pulls-public-land-sales-from-budget-bill">"Facing Mounting Pressure, Mike Lee Pulls Public Land Sales from Budget Bill," MeatEater, June 2025</a>.</li>
+  </ol>
+  <h5>Monuments, mining and leasing</h5>
+  <ol start="26">
+    <li><a href="https://www.whitehouse.gov/presidential-actions/2026/07/modifying-the-grand-staircase-escalante-national-monument/">White House, proclamation modifying Grand Staircase-Escalante, July 2026</a>. <span class="how">Read as web page.</span></li>
+    <li><a href="https://www.cbsnews.com/amp/news/trump-reduces-size-of-bears-ears-and-grand-staircase-national-monuments">CBS News, 2017 reductions</a> (2017 acreage).</li>
+    <li><a href="https://moabsunnews.com/2026/07/18/bears-ears-grand-staircase-monument-reduction-trump-2026/">Moab Sun News, July 18, 2026</a>; <a href="https://moabsunnews.com/2026/09/10/conservation-groups-sue-over-the-90-cut-to-bears-ears-and-grand-staircase/">Moab Sun News, Sept. 10, 2026</a>.</li>
+    <li><a href="https://www.sltrib.com/news/environment/2026/07/13/president-trump-shrinks-bears-ears/">Salt Lake Tribune, July 13, 2026</a> (signing).</li>
+    <li><a href="https://www.backpacker.com/news-and-events/news/new-mining-claims-bears-ears/">"New Mining Claims Filed in Bears Ears," Backpacker, September 2026</a>, citing San Juan County Recorder data.</li>
+    <li><a href="https://townlift.com/2026/09/patagonia-sues-trump-over-bears-ears-as-utah-monument-fight-returns-to-court/">TownLift, September 2026</a> (lawsuits and the 10th Circuit ruling).</li>
+    <li><a href="https://www.everycrsreport.com/reports/RL33908.html">Congressional Research Service, "Mining on Federal Lands: Hardrock Minerals" (RL33908)</a>; <a href="https://www.law.cornell.edu/uscode/text/30/29">30 U.S.C. §29</a>; <a href="https://www.law.cornell.edu/uscode/text/30/37">30 U.S.C. §37</a>; <a href="https://www.blm.gov/programs/energy-and-minerals/mining-and-minerals/locatable-minerals/patents">BLM, Locatable Minerals Patents</a>.</li>
+    <li><a href="https://eplanning.blm.gov/">BLM, "BLM Utah 2027 First Quarter Competitive Oil and Gas Lease Sale Environmental Assessment," DOI-BLM-UT-0000-2026-0009-EA</a>, and "March 24, 2027 Utah Oil &amp; Gas Preliminary Parcel List." <span class="how">Read as a copy of the project page and the parcel-list document provided to us.</span></li>
+    <li>Reporting on the Yosemite / Kingsbarn Realty Capital deal: Washington Post, CNBC, Snopes and NOTUS, August–September 2026.</li>
+  </ol>
+  <h5>The laws underneath</h5>
+  <ol start="35">
+    <li>Utah Legislature bill pages, enrolled texts, vote records and fiscal notes for H.B. 491 (2023); H.B. 353, H.B. 373, S.B. 169, H.B. 502 (2024); S.B. 207, S.B. 277 (2025); H.B. 60, H.B. 546, S.B. 254, S.B. 12, H.B. 17, H.B. 507, H.B. 422, H.B. 349 (2026). Grades for H.B. 353, S.B. 169, H.J.R. 26, S.B. 277 and H.B. 76 were set from each bill's enrolled text for this explainer. <a href="https://le.utah.gov/">le.utah.gov</a></li>
+    <li><a href="https://waterrights.utah.gov/data-centers/">Utah Division of Water Rights, "Large Data Center Water Use Reporting"</a> (H.B. 76); enrolled text of H.B. 76 (2026), §73-5-8.3. <span class="how">Read as web page.</span></li>
+    <li><a href="https://weber-county-hive.github.io/Bill-Tracker/">The Weber County Hive Bill-Tracker</a>, case files and grades; <a href="https://weber-county-hive.github.io/Bill-Tracker/water-land-property-rights-local-power-bills.html">full tracker</a>, grades and outcomes for the pattern section (read Sept. 23, 2026).</li>
+  </ol>
+  <p style="margin-top:12px">Public records only. No comment requested.</p>
+  </div>
+</details>
+
+</main>
+
+<footer>
+  <div class="f1">Independent · Accountability · Journalism</div>
+  <div><a href="https://webercountyhive.substack.com">webercountyhive.substack.com</a></div>
+</footer>
+
+<script>
+(function(){
+  document.querySelectorAll('table.grades').forEach(function(t){
+    var labs=['Power','Transp.','Financial','Environ.','Community','Overall'];
+    t.querySelectorAll('tr').forEach(function(tr){ tr.querySelectorAll('td.gc').forEach(function(td,i){ td.setAttribute('data-l', labs[i]); }); });
+  });
+  document.querySelectorAll('.flip .inner').forEach(function(b){
+    function flip(){ var f=b.parentElement; var on=!f.classList.contains('on');
+      f.classList.toggle('on', on); b.setAttribute('aria-pressed', on?'true':'false'); }
+    b.addEventListener('click', flip);
+    b.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); flip(); } });
+  });
+
+  function runCount(el){
+    var target=parseFloat(el.dataset.count), dec=parseInt(el.dataset.dec||'0',10), pre=el.dataset.pre||'', suf=el.dataset.suf||'';
+    function fmt(v){ return pre + (dec? v.toFixed(dec) : Math.round(v).toLocaleString('en-US')) + suf; }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){ el.textContent=fmt(target); return; }
+    var start=null, dur=1100;
+    function step(t){ if(!start) start=t; var p=Math.min((t-start)/dur,1); el.textContent=fmt(target*(1-Math.pow(1-p,3))); if(p<1) requestAnimationFrame(step); else el.textContent=fmt(target); }
+    requestAnimationFrame(step);
+  }
+  var counters=document.querySelectorAll('[data-count]');
+  if ('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ runCount(e.target); io.unobserve(e.target);} }); });
+    counters.forEach(function(c){ io.observe(c); });
+  }
+
+  function drawBars(container, rows, max){
+    container.innerHTML='';
+    rows.forEach(function(d){
+      var row=document.createElement('div'); row.className='bar-row';
+      var lab=document.createElement('div'); lab.className='bar-lab'; lab.innerHTML='<strong>'+d.y+'</strong>'+(d.l||'');
+      var tr=document.createElement('div'); tr.className='bar-track';
+      var f=document.createElement('div'); f.className='bar-fill'+(d.cut?' cut':''); f.style.width='0%';
+      var v=document.createElement('span'); v.className='bar-val'; v.textContent=d.a.toLocaleString('en-US')+' acres';
+      var pct=d.a/max*100;
+      if (pct<40) v.style.left='calc('+pct.toFixed(1)+'% + 8px)'; else if (d.cut) v.style.color='#FFFFFF';
+      tr.appendChild(f); tr.appendChild(v); row.appendChild(lab); row.appendChild(tr); container.appendChild(row);
+      requestAnimationFrame(function(){ requestAnimationFrame(function(){ f.style.width=pct.toFixed(1)+'%'; }); });
+    });
+  }
+  var MON={
+    be:[{y:"2016",l:"Obama designates",a:1350000},{y:"2017",l:"First Trump cut",a:201876,cut:true},{y:"2021",l:"Biden restores",a:1360000},{y:"2026",l:"Second Trump cut",a:121096,cut:true}],
+    gs:[{y:"1996",l:"Clinton designates",a:1700000},{y:"2017",l:"First Trump cut",a:1003863,cut:true},{y:"2021",l:"Biden restores",a:1870000},{y:"2026",l:"Second Trump cut",a:181541,cut:true}]
+  };
+  var bars=document.getElementById('bars');
+  document.querySelectorAll('#monviz .toggle button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('#monviz .toggle button').forEach(function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true'); drawBars(bars, MON[b.dataset.m], 1900000);
+    });
+  });
+  drawBars(bars, MON.be, 1900000);
+  drawBars(document.getElementById('leasebars'), [
+    {y:"Emery",l:"17 parcels",a:30264},{y:"Uintah",l:"30 parcels",a:20010},{y:"Grand",l:"7 parcels",a:8326}
+  ], 32000);
+
+  var TL=[
+    {y:"1996",c:"m",h:"Grand Staircase-Escalante created",t:"President Clinton designates about 1.7 million acres. About 176,000 acres of school trust land are inside."},
+    {y:"1998",c:"x",h:"The Grand Staircase exchange",t:"Congress approves the Leavitt–Babbitt trade: trust land inside the monument, reservations, parks and forests for federal land elsewhere, coal tracts and $50 million."},
+    {y:"2016",c:"m",h:"Bears Ears created",t:"President Obama designates about 1.35 million acres at the request of five tribes. About 130,000 acres of trust land are inside."},
+    {y:"2017",c:"m",h:"First reductions",t:"President Trump cuts Bears Ears to about 201,900 acres and Grand Staircase to about 1 million. Lawsuits follow."},
+    {y:"2019",c:"x",h:"Dingell Act",t:"Congress creates new wilderness and recreation areas in Emery County and requires a trust-lands exchange to go with them."},
+    {y:"2020",c:"e",h:"Smith farm protected",t:"About 400 acres of farmland next to Camp Williams are protected with Defense, USDA and state funds."},
+    {y:"2021",c:"m",h:"Monuments restored",t:"President Biden restores both monuments. The 2017 lawsuits are put on hold. Utah later sues over the restoration."},
+    {y:"2023",c:"e",h:"Saratoga Springs parcel",t:"Twenty acres planned for 57 homes near Camp Williams' firing points are secured with Army buffer funds for a city cemetery. The value of the density moves elsewhere in the development."},
+    {y:"2024",c:"x",h:"Bears Ears exchange rejected",t:"Gov. Cox withdraws. H.J.R. 26 passes the House 56-13 and the Senate 20-6, ending a trade of about 162,500 state acres for 167,500 federal acres."},
+    {y:"2024",c:"t",h:"Utah sues for 18.5 million acres",t:"Utah asks the U.S. Supreme Court to rule on federal control of unappropriated BLM land in the state."},
+    {y:"2025",c:"t",h:"Supreme Court declines",t:"On Jan. 13, the Court declines Utah's case without explanation. On Feb. 22, the Emery County exchange is completed."},
+    {y:"2025",c:"t",h:"Land-sale provision withdrawn",t:"On June 28, Sen. Lee withdraws his federal land-sale provision from the budget bill. In August, 618 acres go to two state parks."},
+    {y:"2026",c:"t",h:"Utah's lawsuit revived",t:"On June 23, a federal appeals court sends Utah's challenge to the 2021 monument restoration back to district court."},
+    {y:"2026",c:"m",h:"Second reductions",t:"On July 13, both monuments are cut by more than 90%, and the Bears Ears Commission is ended. Removed land opens to mining claims on Sept. 11."},
+    {y:"2026",c:"t",h:"Next lease sale opens",t:"The BLM opens comments on 54 parcels (58,600 acres) in Emery, Uintah and Grand counties for its March 2027 sale. Comments close Oct. 19."}
+  ];
+  var dots=document.getElementById('tldots'), panel=document.getElementById('tlpanel');
+  function show(i){
+    var d=TL[i];
+    dots.querySelectorAll('.tl-dot').forEach(function(b,j){ b.setAttribute('aria-selected', j===i?'true':'false'); b.tabIndex=j===i?0:-1; });
+    panel.innerHTML='<div class="yr">'+d.y+'</div><div class="hd">'+d.h+'</div><p>'+d.t+'</p>';
+  }
+  TL.forEach(function(d,i){
+    var b=document.createElement('button'); b.type='button'; b.className='tl-dot '+d.c; b.setAttribute('role','tab');
+    b.innerHTML='<span></span>'+d.y; b.setAttribute('aria-label', d.y+': '+d.h);
+    b.addEventListener('click',function(){show(i);});
+    b.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'){var n=Math.min(i+1,TL.length-1);show(n);dots.children[n].focus();}
+      if(e.key==='ArrowLeft'){var p=Math.max(i-1,0);show(p);dots.children[p].focus();}
+    });
+    dots.appendChild(b);
+  });
+  show(TL.length-1); dots.scrollLeft=dots.scrollWidth;
+})();
+</script>
+<script type="module">
+  try {
+    const { default: mermaid } = await import('https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs');
+    mermaid.initialize({ startOnLoad: false, theme: 'base', securityLevel: 'strict', themeVariables: {
+      primaryColor: '#F7F1E1', primaryBorderColor: '#0A0A0A', primaryTextColor: '#141414',
+      lineColor: '#9C7A1F', edgeLabelBackground: '#FAF8F3', fontFamily: 'IBM Plex Mono, monospace', fontSize: '13px'
+    }});
+    await mermaid.run({ querySelector: '.mermaid' });
+  } catch (e) { /* diagrams fall back to their text versions */ }
+</script>
+</body>
+</html>
