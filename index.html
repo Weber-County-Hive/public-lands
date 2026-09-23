@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Public Lands · The Weber County Hive</title>
+<meta name="description" content="The Weber County Hive's public-lands files: how land, minerals and water rights change hands in Utah, from public records.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#141414;--muted:#5A5A5A;--rule:#E4DED0;--gold:#9C7A1F;--gold-bright:#D4AF37;--gold-soft:#F7F1E1;--black:#0A0A0A;--panel:#FAF8F3}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Newsreader',Georgia,serif;font-size:18px;line-height:1.6}
+a{color:var(--gold)}
+.wrap{max-width:900px;margin:0 auto;padding:0 16px}
+.mast{background:var(--black);color:#F4E9DD;text-align:center;padding:34px 0 30px;border-bottom:4px solid var(--gold-bright)}
+.hex{width:46px;height:52px;display:block;margin:0 auto 10px}
+.pub{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-bright)}
+.mast h1{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(32px,6vw,50px);margin:12px 0 10px;line-height:1.1}
+.dek{font-style:italic;color:#C9A878;font-size:19px;max-width:620px;margin:0 auto;padding:0 16px}
+.links{margin-top:18px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:0 16px}
+.btn{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:9px 14px;border-radius:2px}
+.btn.solid{background:var(--gold-bright);color:var(--black);font-weight:600}
+.btn.line{border:1px solid #6B6152;color:#E8DCC8}
+main{padding:28px 0 50px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:28px}
+.stat{border:1px solid var(--rule);border-top:3px solid var(--gold-bright);padding:12px;background:var(--panel)}
+.stat .n{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:30px;line-height:1}
+.stat .l{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+@media(max-width:560px){.stats{grid-template-columns:1fr 1fr}}
+h2{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:30px 0 10px;border-bottom:1px solid var(--rule);padding-bottom:8px}
+.search{width:100%;font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--rule);border-radius:2px;margin-bottom:14px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:640px){.cards{grid-template-columns:1fr}}
+.card{display:block;border:1px solid var(--rule);border-top:4px solid var(--gold-bright);padding:16px;text-decoration:none;color:var(--ink);background:#fff}
+.card:hover,.card:focus{background:var(--gold-soft)}
+.card .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.card .t{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:22px;line-height:1.2;margin:6px 0}
+.card .d{font-size:16px;color:var(--muted);line-height:1.45}
+.tags{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;background:var(--panel);border:1px solid var(--rule);padding:2px 6px}
+.card.soon{border-top-color:#BDB39F;background:var(--panel);cursor:default}
+.card.soon .k{color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.none{display:none;color:var(--muted);font-size:16px}
+.about{border-left:4px solid var(--black);background:var(--panel);padding:14px 16px;font-size:16px;margin-top:30px}
+footer{background:var(--black);color:#9A9A9A;text-align:center;padding:24px 16px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em}
+footer .f1{color:var(--gold-bright);text-transform:uppercase;letter-spacing:.24em;margin-bottom:6px}
+footer a{color:#CFC6B8}
+</style>
+</head>
+<body>
+<header class="mast">
+  <svg class="hex" viewBox="0 0 46 52" aria-hidden="true"><polygon points="23,2 44,14 44,38 23,50 2,38 2,14" fill="none" stroke="#D4AF37" stroke-width="2.5"/><circle cx="23" cy="26" r="4" fill="#D4AF37"/></svg>
+  <div class="pub">The Weber County Hive</div>
+  <h1>Public Lands</h1>
+  <p class="dek">How land, minerals and water rights change hands in Utah, traced through public records.</p>
+  <div class="links">
+    <a class="btn solid" href="weber-hive-public-land-changes-hands.html">Start here: the explainer →</a>
+    <a class="btn line" href="https://weber-county-hive.github.io/Bill-Tracker/">Bill-Tracker</a>
+    <a class="btn line" href="https://webercountyhive.substack.com">Substack</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="n" id="count-files">0</div><div class="l">Published files</div></div>
+    <div class="stat"><div class="n" id="count-soon">0</div><div class="l">In progress</div></div>
+    <div class="stat"><div class="n" style="font-size:22px;line-height:1.35">Sept. 23, 2026</div><div class="l">Last updated</div></div>
+  </div>
+
+  <label for="q" class="sr">Search files</label>
+  <input id="q" class="search" type="search" placeholder="Search files: monuments, trust lands, easements, lease sale…">
+
+  <h2>Explainers</h2>
+  <div class="cards" id="published"></div>
+  <p class="none" id="noresults">No files match that search.</p>
+
+  <h2>In progress</h2>
+  <div class="cards" id="soon"></div>
+
+  <div class="about"><strong>About this repo.</strong> Every file here is built from public records: laws, agency documents, court filings and official announcements. Where sources disagree, we show both. We don't request comment from the people and agencies named; we report what the record shows.</div>
+</main>
+
+<footer>
+  <div class="f1">Independent · Accountability · Journalism</div>
+  <div><a href="https://webercountyhive.substack.com">webercountyhive.substack.com</a></div>
+</footer>
+
+<script>
+var FILES = [
+  { status:"published", num:"Explainer 01", href:"weber-hive-public-land-changes-hands.html",
+    title:"How Public Land Changes Hands in Utah",
+    desc:"Easements, exchanges, transfers and monument boundaries, with real Utah examples, the state laws underneath, and where to look things up.",
+    tags:["Bears Ears","Grand Staircase","Trust Lands","Easements","Lease sale"] },
+  { status:"soon", num:"Case file", title:"Trust Lands, MIDA and PIDs",
+    desc:"How trust-land sales and military-linked development authority connect.",
+    tags:["Trust Lands","MIDA","PIDs"] },
+  { status:"soon", num:"Case file", title:"The Great Salt Lake Sentinel Landscape",
+    desc:"The military and conservation land partnership around Hill Air Force Base, Camp Williams and Tooele Army Depot.",
+    tags:["Sentinel Landscape","Camp Williams","Hill AFB"] },
+  { status:"soon", num:"Follow-up", title:"The Emery County lease parcels",
+    desc:"Where the 30,000 acres in the next BLM oil and gas sale sit, and what's near them.",
+    tags:["BLM","Oil and gas","Emery County"] }
+];
+function card(f){
+  var el=document.createElement(f.status==="published"?"a":"div");
+  el.className="card"+(f.status==="soon"?" soon":"");
+  if(f.href) el.href=f.href;
+  el.innerHTML='<div class="k">'+f.num+(f.status==="soon"?" · coming":"")+'</div><div class="t">'+f.title+'</div><div class="d">'+f.desc+'</div><div class="tags">'+f.tags.map(function(t){return '<span>'+t+'</span>';}).join('')+'</div>';
+  el.dataset.text=(f.title+' '+f.desc+' '+f.tags.join(' ')).toLowerCase();
+  return el;
+}
+var pub=document.getElementById('published'), soon=document.getElementById('soon');
+FILES.forEach(function(f){ (f.status==="published"?pub:soon).appendChild(card(f)); });
+document.getElementById('count-files').textContent=FILES.filter(function(f){return f.status==="published";}).length;
+document.getElementById('count-soon').textContent=FILES.filter(function(f){return f.status==="soon";}).length;
+document.getElementById('q').addEventListener('input',function(e){
+  var q=e.target.value.toLowerCase().trim(), shown=0;
+  document.querySelectorAll('.card').forEach(function(c){ var m=!q||c.dataset.text.indexOf(q)>-1; c.style.display=m?'':'none'; if(m) shown++; });
+  document.getElementById('noresults').style.display=shown?'none':'block';
+});
+</script>
+</body>
+</html>
