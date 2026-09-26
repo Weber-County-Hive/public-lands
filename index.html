@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Public Lands · The Weber County Hive</title>
 <meta name="description" content="The Weber County Hive's public-lands files: how land, minerals and water rights change hands in Utah, from public records.">
+<link rel="icon" type="image/png" href="hive-bee.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&family=Cinzel:wght@600&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#141414;--muted:#5A5A5A;--rule:#E4DED0;--gold:#9C7A1F;--gold-bright:#D4AF37;--gold-soft:#F7F1E1;--black:#0A0A0A;--panel:#FAF8F3}
 *{box-sizing:border-box}
@@ -48,11 +49,25 @@ footer{background:var(--black);color:#9A9A9A;text-align:center;padding:24px 16px
 footer .f1{color:var(--gold-bright);text-transform:uppercase;letter-spacing:.24em;margin-bottom:6px}
 footer a{color:#CFC6B8}
 </style>
+<style>
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1200px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+.hb-foot a{color:#b8956a;}
+@media(max-width:600px){.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}}
+</style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo" onerror="this.style.display='none'"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 <header class="mast">
   <svg class="hex" viewBox="0 0 46 52" aria-hidden="true"><polygon points="23,2 44,14 44,38 23,50 2,38 2,14" fill="none" stroke="#D4AF37" stroke-width="2.5"/><circle cx="23" cy="26" r="4" fill="#D4AF37"/></svg>
-  <div class="pub">The Weber County Hive</div>
+  <div class="pub">Utah Hive Politics</div>
   <h1>Public Lands</h1>
   <p class="dek">How land, minerals and water rights change hands in Utah, traced through public records.</p>
   <div class="links">
@@ -66,13 +81,13 @@ footer a{color:#CFC6B8}
   <div class="stats">
     <div class="stat"><div class="n" id="count-files">0</div><div class="l">Published files</div></div>
     <div class="stat"><div class="n" id="count-soon">0</div><div class="l">In progress</div></div>
-    <div class="stat"><div class="n" style="font-size:22px;line-height:1.35">Sept. 23, 2026</div><div class="l">Last updated</div></div>
+    <div class="stat"><div class="n" id="last-updated" style="font-size:22px;line-height:1.35">Sept. 26, 2026</div><div class="l">Last updated</div></div>
   </div>
 
   <label for="q" class="sr">Search files</label>
   <input id="q" class="search" type="search" placeholder="Search files: monuments, trust lands, easements, lease sale…">
 
-  <h2>Explainers</h2>
+  <h2>Explainers &amp; case files</h2>
   <div class="cards" id="published"></div>
   <p class="none" id="noresults">No files match that search.</p>
 
@@ -82,17 +97,18 @@ footer a{color:#CFC6B8}
   <div class="about"><strong>About this repo.</strong> Every file here is built from public records: laws, agency documents, court filings and official announcements. Where sources disagree, we show both. We don't request comment from the people and agencies named; we report what the record shows.</div>
 </main>
 
-<footer>
-  <div class="f1">Independent · Accountability · Journalism</div>
-  <div><a href="https://webercountyhive.substack.com">webercountyhive.substack.com</a></div>
-</footer>
+<footer class="hb-foot"><img src="hive-bee.png" alt="" onerror="this.style.display='none'"><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span><span class="hb-sub" style="margin-top:8px"><a href="https://webercountyhive.substack.com">webercountyhive.substack.com</a></span></footer>
 
 <script>
 var FILES = [
-  { status:"published", num:"Explainer 01", href:"weber-hive-public-land-changes-hands.html",
+  { status:"published", num:"Explainer 01", href:"weber-hive-public-land-changes-hands.html", updated:"2026-09-26",
     title:"How Public Land Changes Hands in Utah",
     desc:"Easements, exchanges, transfers and monument boundaries, with real Utah examples, the state laws underneath, and where to look things up.",
     tags:["Bears Ears","Grand Staircase","Trust Lands","Easements","Lease sale"] },
+  { status:"published", num:"Case file 01", href:"weber-hive-wasatch-trust-land-option.html", updated:"2026-09-26",
+    title:"720 Acres of Trust Land East of Heber",
+    desc:"A Trust Lands option agreement in Wasatch County: $3.6 million as zoned, about $16 million to the school trust if rezoned for 100+ lots, and the county's August 2026 decision.",
+    tags:["Trust Lands","Wasatch County","Philo Development","Rezoning","Water"] },
   { status:"soon", num:"Case file", title:"Trust Lands, MIDA and PIDs",
     desc:"How trust-land sales and military-linked development authority connect.",
     tags:["Trust Lands","MIDA","PIDs"] },
@@ -115,6 +131,12 @@ var pub=document.getElementById('published'), soon=document.getElementById('soon
 FILES.forEach(function(f){ (f.status==="published"?pub:soon).appendChild(card(f)); });
 document.getElementById('count-files').textContent=FILES.filter(function(f){return f.status==="published";}).length;
 document.getElementById('count-soon').textContent=FILES.filter(function(f){return f.status==="soon";}).length;
+(function(){
+  var ds=FILES.map(function(f){return f.updated;}).filter(Boolean).sort();
+  if(ds.length){ var d=new Date(ds[ds.length-1]+'T12:00:00');
+    var m=['Jan.','Feb.','March','April','May','June','July','Aug.','Sept.','Oct.','Nov.','Dec.'][d.getMonth()];
+    document.getElementById('last-updated').textContent=m+' '+d.getDate()+', '+d.getFullYear(); }
+})();
 document.getElementById('q').addEventListener('input',function(e){
   var q=e.target.value.toLowerCase().trim(), shown=0;
   document.querySelectorAll('.card').forEach(function(c){ var m=!q||c.dataset.text.indexOf(q)>-1; c.style.display=m?'':'none'; if(m) shown++; });
