@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>720 Acres of Trust Land East of Heber</title>
+<meta name="description" content="A Utah Trust Lands option agreement on 720.96 acres in Wasatch County: $3.6 million as zoned, about $16 million to the school trust if rezoned for 100+ lots, and the county's August 2026 decision.">
+<link rel="icon" type="image/png" href="hive-bee.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&family=Cinzel:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --ink:#141414; --muted:#5A5A5A; --rule:#E4DED0;
+  --gold:#9C7A1F; --gold-bright:#D4AF37; --gold-soft:#F7F1E1;
+  --black:#0A0A0A; --panel:#FAF8F3;
+  --red:#A63D2F; --red-soft:#F6E6E2; --green:#3E7A4F; --green-soft:#E4F0E7; --blue:#35607F; --blue-soft:#E3ECF3; --amber:#9A6A12; --amber-soft:#F8EDD5;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Newsreader',Georgia,serif;font-size:19px;line-height:1.6}
+a{color:var(--gold);text-underline-offset:3px}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+
+.topbar{background:#000;color:#BDBDBD;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em}
+.topbar .wrap{display:flex;justify-content:space-between;gap:10px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.topbar a{color:var(--gold-bright);text-decoration:none}
+.topbar a:hover{text-decoration:underline}
+
+.mast{background:var(--black);color:#F4E9DD;padding:30px 0 28px;text-align:center;border-bottom:4px solid var(--gold-bright)}
+.hex{width:46px;height:52px;margin:0 auto 10px;display:block}
+.pub{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-bright)}
+.mast h1{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(30px,6vw,48px);line-height:1.1;margin:14px auto 12px;max-width:700px;padding:0 16px}
+.dek{font-style:italic;color:#C9A878;font-size:20px;max-width:620px;margin:0 auto;padding:0 16px}
+.dateline{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9A9A9A;margin-top:16px;letter-spacing:.06em;padding:0 16px}
+
+main{padding:30px 0 50px}
+h2{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(24px,4.4vw,31px);line-height:1.2;margin:52px 0 12px;scroll-margin-top:16px}
+h2 .num{display:block;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.14em;color:var(--gold);margin-bottom:4px}
+h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:21px;margin:30px 0 8px}
+p{margin:0 0 16px}
+.lede{font-size:21px}
+.small{font-size:15px;color:var(--muted)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:8px 0 26px}
+.stat{background:var(--black);color:#F4E9DD;padding:14px 12px;border-top:3px solid var(--gold-bright);border-radius:2px}
+.stat .n{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(22px,4vw,30px);color:var(--gold-bright);line-height:1.1}
+.stat .l{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;color:#CFC6B8;margin-top:6px;line-height:1.35}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+.readerbox{border:1px solid var(--rule);border-left:4px solid var(--black);background:var(--panel);padding:16px 18px;margin:18px 0}
+.readerbox .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.readerbox p:last-child{margin-bottom:0}
+.toc{font-family:'IBM Plex Mono',monospace;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 14px;margin:10px 0 0;padding:0;list-style:none}
+.toc a{text-decoration:none;border-bottom:1px solid var(--gold-bright);color:var(--ink)}
+
+.callout{background:var(--gold-soft);border-left:4px solid var(--gold-bright);padding:16px 18px;margin:22px 0;border-radius:2px}
+.callout p:last-child{margin-bottom:0}
+
+.flips{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}
+@media(max-width:600px){.flips{grid-template-columns:1fr}}
+.flip{perspective:1000px}
+.flip .inner{display:grid;width:100%;cursor:pointer;transform-style:preserve-3d;transition:transform .55s ease}
+.flip.on .inner{transform:rotateY(180deg)}
+.flip .face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid var(--rule);border-radius:3px;padding:16px;display:flex;flex-direction:column;min-height:200px}
+.flip .front{background:#fff;border-top:4px solid var(--gold-bright)}
+.flip .back{background:var(--black);color:#F4E9DD;transform:rotateY(180deg);border-top:4px solid var(--gold-bright);font-size:15px;line-height:1.5}
+.flip .back p{margin:6px 0 10px}
+.flip .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.flip .back .k{color:var(--gold-bright)}
+.flip .t{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:20px;line-height:1.25;margin:6px 0}
+.flip .d{font-size:16px;color:var(--muted);line-height:1.45}
+.flip .hint{margin-top:auto;padding-top:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:.08em}
+.flip .back .hint{color:#9A9A9A}
+.flip .back dl{margin:4px 0 8px}
+.flip .back dt{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold-bright);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+.flip .back dd{margin:0}
+.flip .inner:focus-visible{outline:3px solid var(--gold-bright);outline-offset:3px}
+
+.verdicts{display:grid;gap:12px;margin:18px 0}
+.verdict{border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.verdict .claim{background:var(--panel);padding:12px 16px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.verdict .claim q{font-style:italic;font-size:17px;flex:1 1 300px}
+.chip{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:2px;white-space:nowrap;border:1.5px solid}
+.chip.sup{color:var(--green);background:var(--green-soft);border-color:var(--green)}
+.chip.part{color:var(--amber);background:var(--amber-soft);border-color:var(--amber)}
+.chip.no{color:var(--red);background:var(--red-soft);border-color:var(--red)}
+.verdict .rec{padding:12px 16px;font-size:16px}
+.verdict .rec p:last-child{margin-bottom:0}
+
+.ex{border:1px solid var(--rule);border-radius:3px;margin:18px 0;overflow:hidden}
+.ex-h{background:var(--black);color:#F4E9DD;padding:10px 14px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
+.ex-h .n{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px}
+.ex-h .y{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold-bright);letter-spacing:.08em}
+.ex-b{padding:14px 16px 6px;font-size:17px}
+.ex-b ul{margin:0 0 12px;padding-left:20px}
+.ex-b li{margin-bottom:6px}
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:2px;margin:0 4px 10px 0}
+.tag.benefit{background:var(--green-soft);color:var(--green)}
+.tag.question{background:var(--red-soft);color:var(--red)}
+.tag.status{background:var(--blue-soft);color:var(--blue)}
+.ex details{border-top:1px dashed var(--rule);margin:6px 0 10px}
+.ex details summary{padding:8px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;color:var(--gold)}
+
+.tbl-wrap{overflow-x:auto;margin:16px 0 22px;border:1px solid var(--rule);border-radius:3px}
+table{width:100%;border-collapse:collapse;font-size:15.5px;min-width:520px}
+th,td{border-bottom:1px solid var(--rule);padding:9px 10px;text-align:left;vertical-align:top}
+th{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--panel)}
+tr:last-child td{border-bottom:0}
+td.first{font-weight:600}
+.grade{display:inline-block;min-width:30px;text-align:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;padding:2px 6px;border-radius:2px;color:#fff}
+.g-A,.g-B{background:var(--green)}.g-C{background:var(--amber)}.g-D,.g-F{background:var(--red)}
+table.grades{min-width:760px}td.gc{text-align:center;white-space:nowrap}
+@media(max-width:640px){
+  table.grades{min-width:0}
+  table.grades tr:first-child{display:none}
+  table.grades tr{display:block;border-bottom:1px solid var(--rule);padding:8px 0}
+  table.grades td{display:block;border:0;padding:3px 12px}
+  table.grades td.gc{display:inline-block;padding:4px 6px 4px 12px;text-align:left}
+  table.grades td.gc::before{content:attr(data-l) " ";font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+}
+
+
+.diagram{border:1px solid var(--rule);background:var(--panel);border-radius:3px;padding:14px;margin:20px 0}
+.diagram .cap{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.diagram .mermaid{text-align:center;overflow-x:auto;font-family:'IBM Plex Mono',monospace;font-size:13px;white-space:pre-wrap;margin:0;background:none}
+.diagram .mermaid svg{max-width:100%;height:auto}
+.diagram .alt{font-size:14px;color:var(--muted);margin:10px 0 0}
+
+.viz{border:1px solid var(--rule);background:var(--panel);padding:16px;margin:22px 0;border-radius:3px}
+.viz-h{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px}
+.viz-title{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:19px;margin-bottom:6px}
+.toggle{display:flex;gap:6px}
+.toggle button{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;border:1px solid var(--black);background:#fff;color:var(--black);padding:6px 10px;cursor:pointer;border-radius:2px}
+.toggle button[aria-pressed="true"]{background:var(--black);color:var(--gold-bright)}
+.bars{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bar-row{display:grid;grid-template-columns:130px 1fr;gap:10px;align-items:center}
+.bar-lab{font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.3;color:var(--muted)}
+.bar-lab strong{display:block;color:var(--ink);font-size:13px}
+.bar-track{background:#EDE8DC;height:30px;position:relative;border-radius:2px}
+.bar-fill{height:100%;background:var(--gold-bright);transition:width .6s ease;border-radius:2px}
+.bar-fill.cut{background:var(--red)}
+.bar-val{position:absolute;left:8px;top:50%;transform:translateY(-50%);font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:var(--black);white-space:nowrap}
+.viz-cap{font-size:14px;color:var(--muted);margin:12px 0 0}
+@media(max-width:480px){.bar-row{grid-template-columns:96px 1fr}}
+
+.tl{margin:22px 0;border:1px solid var(--rule);border-radius:3px;background:#fff}
+.tl-dots{display:flex;overflow-x:auto;padding:14px 12px 8px;border-bottom:1px solid var(--rule);scrollbar-width:thin}
+.tl-dot{flex:0 0 auto;background:none;border:0;cursor:pointer;padding:4px 8px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)}
+.tl-dot span{display:block;width:14px;height:14px;border-radius:50%;margin:0 auto 5px;border:2px solid var(--black);background:#fff}
+.tl-dot.x span{background:var(--gold-bright)}.tl-dot.m span{background:var(--red)}.tl-dot.t span{background:var(--blue)}.tl-dot.e span{background:var(--green)}
+.tl-dot[aria-selected="true"]{color:var(--black);font-weight:600}
+.tl-dot[aria-selected="true"] span{box-shadow:0 0 0 3px var(--gold-soft),0 0 0 5px var(--gold-bright)}
+.tl-panel{padding:14px 16px 16px;min-height:130px}
+.tl-panel .yr{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold);letter-spacing:.1em}
+.tl-panel .hd{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:19px;margin:2px 0 6px}
+.tl-panel p{font-size:16px;margin:0}
+.legend{display:flex;flex-wrap:wrap;gap:12px;padding:0 16px 12px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--black);margin-right:5px;vertical-align:-1px}
+
+.pattern{border:1px solid var(--rule);background:var(--panel);border-radius:3px;padding:16px;margin:20px 0}
+.prow{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center;margin:8px 0}
+.ptrack{display:flex;height:28px;background:#EDE8DC;border-radius:2px;overflow:hidden}
+.seg{display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;min-width:22px}
+.seg.pp{background:#0A0A0A;color:#D4AF37}.seg.pd{background:#BDB39F;color:#141414}.seg.pv{background:#FFFFFF;color:#141414;border-left:1px solid #BDB39F}
+.pkey{display:flex;gap:14px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:10px}
+.pkey i{display:inline-block;width:12px;height:12px;vertical-align:-2px;margin-right:5px;border:1px solid #BDB39F}
+.bigthree{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+@media(max-width:600px){.bigthree{grid-template-columns:1fr}}
+.bigthree div{border-top:4px solid var(--gold-bright);background:#fff;border:1px solid var(--rule);padding:12px 14px;font-size:15.5px}
+.bigthree b{display:block;font-family:'Fraunces',Georgia,serif;font-size:26px;line-height:1.1;margin-bottom:4px}
+
+.kd{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+@media(max-width:640px){.kd{grid-template-columns:1fr}}
+.kd > div{border:1px solid var(--rule);border-radius:3px;padding:14px 16px}
+.kd h4{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px}
+.kd .know{border-top:4px solid var(--green)} .kd .know h4{color:var(--green)}
+.kd .dont{border-top:4px solid var(--amber)} .kd .dont h4{color:var(--amber)}
+.kd ul{margin:0;padding-left:18px;font-size:16px}
+.kd li{margin-bottom:6px}
+.bottomline{background:var(--black);color:#F4E9DD;padding:20px 22px;border-left:5px solid var(--gold-bright);margin:22px 0;border-radius:2px}
+.bottomline .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--gold-bright);text-transform:uppercase;margin-bottom:6px}
+.bottomline p:last-child{margin-bottom:0}
+
+.lookup{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+@media(max-width:600px){.lookup{grid-template-columns:1fr}}
+.lk{border:1px solid var(--rule);padding:12px 14px;border-radius:3px;font-size:15.5px}
+.lk a{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:17px;display:block;margin-bottom:2px}
+
+details.src{border:1px solid var(--rule);border-radius:3px;margin:26px 0;background:var(--panel)}
+details.src > summary{cursor:pointer;padding:12px 16px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--black)}
+details.src .inner{padding:0 18px 14px;font-size:15px}
+details.src h5{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:14px 0 6px}
+details.src ol{padding-left:26px;margin:0}
+details.src li{margin-bottom:7px;word-break:break-word}
+.how{color:var(--muted);font-size:13.5px}
+
+footer{background:var(--black);color:#9A9A9A;text-align:center;padding:24px 16px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em}
+footer .f1{color:var(--gold-bright);text-transform:uppercase;letter-spacing:.24em;margin-bottom:6px}
+footer a{color:#CFC6B8}
+</style>
+
+<style>
+.rub td.why{font-size:15.5px}
+.rub td.gcell{white-space:nowrap;text-align:center}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+@media(max-width:640px){.twocol{grid-template-columns:1fr}}
+.twocol > div{border:1px solid var(--rule);border-top:4px solid var(--black);border-radius:3px;padding:14px 16px;font-size:16px}
+.twocol h4{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;color:var(--gold)}
+.twocol ul{margin:0;padding-left:18px}.twocol li{margin-bottom:6px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:18px 0}
+.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 56px;border:1px solid var(--rule);border-radius:3px;margin-bottom:8px;background:#fff;font-size:16.5px}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:12px;width:28px;height:28px;border-radius:50%;background:var(--black);color:var(--gold-bright);font-family:'IBM Plex Mono',monospace;font-size:13px;display:flex;align-items:center;justify-content:center}
+.steps li b{font-family:'Fraunces',Georgia,serif}
+.flips .flip .inner{height:100%}.gloss .flip .face{min-height:150px}
+</style>
+<style>
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1200px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+.hb-foot a{color:#b8956a;}
+@media(max-width:600px){.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}}
+</style>
+</head>
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo" onerror="this.style.display='none'"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="topbar"><div class="wrap"><a href="index.html">← PUBLIC-LANDS · ALL FILES</a><span>CASE FILE 01</span></div></div>
+
+<header class="mast">
+  <svg class="hex" viewBox="0 0 46 52" aria-hidden="true"><polygon points="23,2 44,14 44,38 23,50 2,38 2,14" fill="none" stroke="#D4AF37" stroke-width="2.5"/><circle cx="23" cy="26" r="4" fill="#D4AF37"/></svg>
+  <div class="pub">Utah Hive Politics</div>
+  <h1>720 Acres of Trust Land East of Heber</h1>
+  <p class="dek">How a state trust land deal works, what the state's own paperwork says the land is worth with 5 homes or with 100, and what happened when the county said no.</p>
+  <div class="dateline">CASE FILE · WASATCH COUNTY · PUBLISHED SEPTEMBER 26, 2026</div>
+</header>
+
+<main class="wrap">
+
+<div class="stats" aria-label="At a glance">
+  <div class="stat"><div class="n" data-count="720.96" data-dec="2">720.96</div><div class="l">acres of state trust land, about 4 miles east of Heber City</div></div>
+  <div class="stat"><div class="n" data-count="3.6" data-dec="1" data-pre="$" data-suf="M">$3.6M</div><div class="l">appraised value as zoned today (5 homes allowed)</div></div>
+  <div class="stat"><div class="n" data-count="16" data-pre="~$" data-suf="M">~$16M</div><div class="l">projected to the trust if rezoned for 100+ lots</div></div>
+  <div class="stat"><div class="n">Jan. 1, 2027</div><div class="l">developer's extended deadline to meet the conditions</div></div>
+</div>
+
+<div class="readerbox">
+  <div class="k">New here? Start with this</div>
+  <p><b>The short version:</b> Utah's Trust Lands Administration manages state land to earn money for public schools. In 2023 it signed an option agreement with a developer for 720.96 acres in Wasatch County. If the developer can get the land rezoned for at least 100 homes and find water for them, the trust will lease it to the developer to build. The trust's own staff memo says that would raise the trust's money from the land from about $3.6 million to about $16 million.</p>
+  <p><b>What happened:</b> In August 2026, Wasatch County declined the development agreement the developer needed. Days later, a housing adviser to Gov. Spencer Cox told the Heber City Council that the county's state funding was "at risk." The Governor's Office later told the county there would be no effect on its funding.</p>
+  <p><b>What's still open:</b> The developer's deadline under the trust agreement is Jan. 1, 2027. No later board action on this deal was found in the Trust Lands agendas reviewed.</p>
+</div>
+
+<ul class="toc" aria-label="Sections">
+  <li><a href="#terms">Tap to define</a></li><li><a href="#how">How the deal works</a></li><li><a href="#numbers">The numbers</a></li><li><a href="#who">Who's involved</a></li><li><a href="#county">The county's decision</a></li><li><a href="#next">Next door</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#open">Open questions</a></li><li><a href="#grades">Graded</a></li><li><a href="#sources">Sources</a></li>
+</ul>
+
+<h2 id="terms"><span class="num">TAP TO DEFINE</span>The words in this file</h2>
+<div class="flips gloss">
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Term</span><span class="t">Trust lands</span><span class="hint">TAP TO FLIP ↻</span></span><span class="face back"><span class="k">Trust lands</span><p>Land the federal government gave Utah at statehood to earn money for public schools and other named beneficiaries. The Trust Lands Administration (once called SITLA) sells, leases and develops it. The money goes into permanent funds.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Term</span><span class="t">Option agreement</span><span class="hint">TAP TO FLIP ↻</span></span><span class="face back"><span class="k">Option agreement</span><p>A promise to make a deal later if certain conditions are met by a deadline. Nothing is leased or sold until the conditions are met.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Term</span><span class="t">Development lease</span><span class="hint">TAP TO FLIP ↻</span></span><span class="face back"><span class="k">Development lease</span><p>A lease, not a sale. The developer builds on trust land for a set term. The trust is paid under the lease terms.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Term</span><span class="t">P-160 and M zones</span><span class="hint">TAP TO FLIP ↻</span></span><span class="face back"><span class="k">Current zoning</span><p>Preservation (P-160): one home per 160 acres. Mountain (M): one home per 20 acres. On this parcel that allows 5 homes in all.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Term</span><span class="t">RA-5 zone</span><span class="hint">TAP TO FLIP ↻</span></span><span class="face back"><span class="k">RA-5</span><p>Residential Agricultural zoning. The option agreement requires the developer to get the land rezoned to RA-5 with at least 100 lots.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Term</span><span class="t">Legislative development agreement</span><span class="hint">TAP TO FLIP ↻</span></span><span class="face back"><span class="k">Legislative development agreement</span><p>A contract between a developer and a county, approved by the county council, that can set density and terms different from the regular zoning.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Term</span><span class="t">Preliminary municipality</span><span class="hint">TAP TO FLIP ↻</span></span><span class="face back"><span class="k">Preliminary municipality</span><p>A new town that a landowner can ask the state to create under a 2024 pilot program (S.B. 258). It gets control of zoning but not taxation. Counties do not approve it.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Term</span><span class="t">Wildland Urban Interface</span><span class="hint">TAP TO FLIP ↻</span></span><span class="face back"><span class="k">WUI</span><p>Areas where homes would meet undeveloped wildland, with higher wildfire and evacuation risk.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+</div>
+
+<h2 id="how"><span class="num">HOW THE DEAL WORKS</span>An option first, a lease later</h2>
+<p>This is not a sale. The trust keeps the land unless and until the developer meets two conditions, and even then the next step is a lease.</p>
+<ol class="steps">
+  <li><b>Feb. 28, 2023.</b> The Trust Lands Administration signs a mutual option agreement (DEVL 1297) with Mountain Venture Studios, which the trust's board materials identify with Philo Development.</li>
+  <li><b>Condition 1.</b> Get the county to rezone the land to Residential Agricultural (RA-5) with at least 100 residential lots.</li>
+  <li><b>Condition 2.</b> Acquire water rights enough to serve at least 100 homes.</li>
+  <li><b>If both are met,</b> the trust enters a 10-year development lease with the developer.</li>
+  <li><b>Deadline.</b> Originally Jan. 1, 2025. On Sept. 19, 2024, trust staff asked the board to extend it to Jan. 1, 2027, because the developer said it needed up to 24 more months for approvals.</li>
+</ol>
+<div class="callout"><p><b>The water:</b> the developer told the trust it had partnered with Independence Mutual Water Company to acquire 1,180.9 water shares for the larger project, and gave the trust letters of confirmation. Those letters are described in the staff memo, not published in it, and were not independently checked for this file.</p></div>
+
+<h2 id="numbers"><span class="num">THE NUMBERS</span>What the trust's own memo says the land is worth</h2>
+<div class="viz">
+  <div class="viz-title">Value to the trust, as zoned vs. if rezoned</div>
+  <div class="bars">
+    <div class="bar-row"><div class="bar-lab"><strong>As zoned</strong>5 homes allowed</div><div class="bar-track"><div class="bar-fill" style="width:22.5%"></div><span class="bar-val">$3.6 million</span></div></div>
+    <div class="bar-row"><div class="bar-lab"><strong>If rezoned</strong>100+ lots</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div><span class="bar-val">~$15,986,000</span></div></div>
+  </div>
+  <p class="viz-cap">Both figures are from the Trust Lands staff memo in the Sept. 19, 2024 board packet: an "as-is" appraisal of $3.6 million, and projected gross revenue to the trust of about $15,986,000 if the rezoning succeeds, an increase the memo calls "over $12,000,000."</p>
+</div>
+<div class="bigthree">
+  <div><b>About 4.4×</b>How much the trust's projected return grows with the rezoning ($15.986M ÷ $3.6M). Hive calculation.</div>
+  <div><b>About $160,000</b>Projected return to the trust per lot, if 100 lots (≈$15.986M ÷ 100). Hive calculation.</div>
+  <div><b>Not stated</b>The trust's share of sales or lease payments. The amendment in the packet does not list them.</div>
+</div>
+<div class="callout"><p><b>Why this matters for the public:</b> the trust's money goes to public schools, so a higher return is a public benefit. The rezoning that produces it is a county decision, and the costs of 100 or more homes on the land (roads, water, fire service) fall on the county and its residents. Both are real, and this file shows both.</p></div>
+
+<h2 id="who"><span class="num">WHO'S INVOLVED</span>The parties on the record</h2>
+<div class="twocol">
+  <div><h4>The developer</h4><ul>
+    <li>Board materials name the counterparty as <b>Mountain Venture Studios</b> and title the item "with Philo Development."</li>
+    <li>Utah business records show <b>Philo Development Group, LLC</b> was formed Nov. 14, 2022, about 3.5 months before the option agreement, and list Chad Staheli as a manager.</li>
+    <li>Philo partner <b>Greg Whitehead</b> is the primary sponsor of the separate Wasatch Highlands new-town application next door (see below).</li>
+  </ul></div>
+  <div><h4>The state</h4><ul>
+    <li>Staff memo author: <b>Gregg McArthur</b>, economic development and project manager, Trust Lands Administration.</li>
+    <li>The trust's board has seven members. Six serve six-year terms from a nominating list. The seventh is an at-large member "appointed at the pleasure of the Governor."</li>
+    <li>That seat is held by <b>Mike Mower</b>, listed on the board page as a senior advisor in the Governor's Office, with a term that "does not expire." Whether he voted on this deal was not found in the records reviewed.</li>
+  </ul></div>
+</div>
+
+<h2 id="county"><span class="num">THE COUNTY'S DECISION</span>What Wasatch County decided, and what followed</h2>
+<div class="ex">
+  <div class="ex-h"><span class="n">Aug. 12, 2026 · work meeting</span><span class="y">NOT A FINAL VOTE</span></div>
+  <div class="ex-b"><p>The council did not advance the developer's request for a 144-lot legislative development agreement on the trust land. A local real estate blog's account of the meeting lists four reasons councilmembers gave:</p>
+  <ul><li>The density didn't fit the county's updated General Plan.</li><li>Part of the land is in a Wildland Urban Interface area.</li><li>Water may not support the density.</li><li>Not enough public benefit to justify leaving the current zoning.</li></ul>
+  <p class="small">That account is secondary (Keye Team blog, Aug. 14, 2026). It quotes County Manager Dustin Grabau: "there was never a point at which Wasatch County championed the project." The meeting recording or minutes would confirm the reasons.</p></div>
+</div>
+<div class="ex">
+  <div class="ex-h"><span class="n">Aug. 18, 2026 · Heber City Council</span><span class="y">STATE ADVISER</span></div>
+  <div class="ex-b"><p>At an agenda item called "Affordable Housing 101," Steve Waldrip, Gov. Cox's senior housing adviser, cited the county's decision on this deal and its opposition to the preliminary municipality law. As quoted by the Park Record and KPCW, he said the county's funding "is now at risk, meaning none," and "that funding is now suspended."</p>
+  <p class="small">He spoke to the Heber City Council, not the county. County Manager Grabau told reporters the two issues were not related to each other.</p></div>
+</div>
+<div class="ex">
+  <div class="ex-h"><span class="n">Aug. 19, 2026 · county council</span><span class="y">FORMAL ACTION</span></div>
+  <div class="ex-b"><p>The county formally declined the 144-lot agreement, as reported by KPCW and the Park Record. Those reports describe the parcel as about 740 acres; the trust's board packet says 720.96 acres.</p></div>
+</div>
+<div class="ex">
+  <div class="ex-h"><span class="n">Aug. 28, 2026 · meeting with the Governor's Office</span><span class="y">FUNDING</span></div>
+  <div class="ex-b"><p>In a post on its official Facebook page, the county said the Governor's Office "acknowledged their initial approach in response to our decisions was not the most constructive path forward and confirmed there will be no negative impacts to state funding in Wasatch County."</p></div>
+</div>
+
+<h2 id="next"><span class="num">NEXT DOOR</span>A separate, bigger proposal</h2>
+<p>Don't mix these up. The 720.96-acre trust land deal is separate from <b>Wasatch Highlands</b>, a proposed new town of about 2,700 acres in the same area east of Heber, near Red Ledges. Wasatch Highlands was filed under the state's preliminary municipality program, where the state, not the county, decides. Its primary sponsor is Philo partner Greg Whitehead, and the landowner of record is Christensen Mountain Properties, L.L.C.</p>
+<p>Wasatch County's own report on the program, attached to its Sept. 2, 2026 agenda, describes one pending application with 754 units, a 200-room hotel and homes from $1.5 million to $10 million, and says its draft study "makes no mention of affordable housing." The report does not name the application, but its details match Wasatch Highlands. The county's Resolution 26-11 asks the Legislature to repeal the program.</p>
+
+<h2 id="timeline"><span class="num">TIMELINE</span>From option to rejection</h2>
+<div class="tbl-wrap"><table>
+  <tr><th>Date</th><th>What happened</th><th>Source</th></tr>
+  <tr><td class="first">Nov. 14, 2022</td><td>Philo Development Group, LLC formed.</td><td>Utah Division of Corporations</td></tr>
+  <tr><td class="first">Feb. 28, 2023</td><td>Trust signs option agreement DEVL 1297.</td><td>Trust Lands board packet</td></tr>
+  <tr><td class="first">Sept. 19, 2024</td><td>Board asked to extend the deadline to Jan. 1, 2027.</td><td>Trust Lands board packet</td></tr>
+  <tr><td class="first">Jan. 1, 2025</td><td>Original deadline to meet the conditions (since extended).</td><td>Trust Lands board packet</td></tr>
+  <tr><td class="first">Aug. 12, 2026</td><td>County work meeting; 144-lot request not advanced.</td><td>Keye Team blog; KPCW</td></tr>
+  <tr><td class="first">Aug. 18, 2026</td><td>State housing adviser's funding remarks at Heber City Council.</td><td>Park Record; KPCW</td></tr>
+  <tr><td class="first">Aug. 19, 2026</td><td>County formally declines the agreement.</td><td>KPCW; Park Record</td></tr>
+  <tr><td class="first">Aug. 28, 2026</td><td>Governor's Office tells county: no effect on state funding.</td><td>Wasatch County Facebook</td></tr>
+  <tr><td class="first">Jan. 1, 2027</td><td>Extended deadline under the option agreement.</td><td>Trust Lands board packet</td></tr>
+</table></div>
+
+<h2 id="open"><span class="num">OPEN QUESTIONS</span>What the record doesn't answer yet</h2>
+<p>None of these assume wrongdoing. Tap a card to see where the answer would be.</p>
+<div class="flips">
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 01</span><span class="t">Did the board approve the 2024 extension, and how did each trustee vote?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>Approved minutes of the Sept. 19, 2024 meeting, usually posted with a later board packet on the Utah Public Notice Website.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 02</span><span class="t">What share of lot sales or lease payments would the trust receive?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>The original 2023 option agreement and its board item, not included in the 2024 amendment reviewed here.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 03</span><span class="t">Will the developer ask for another extension before Jan. 1, 2027?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>Trust Lands board agendas for fall 2026 at trustlands.utah.gov and the Utah Public Notice Website.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 04</span><span class="t">Is it 720.96 acres or about 740?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>The trust's packet says 720.96; news reports say about 740. The county's agenda materials for Aug. 12 and 19 would show the acreage the council reviewed.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 05</span><span class="t">Are the 1,180.9 water shares enough, and are they for this parcel?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>Division of Water Rights records, and any change application naming Independence Mutual Water Company.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+  <div class="flip"><div class="inner" role="button" tabindex="0" aria-pressed="false"><span class="face front"><span class="k">Question 06</span><span class="t">What happens to the land if the conditions are never met?</span><span class="hint">WHERE TO LOOK ↻</span></span><span class="face back"><span class="k">Where to look</span><p>The option agreement's termination terms, and later Trust Lands board items for this parcel.</p><span class="hint">TAP TO FLIP BACK</span></span></div></div>
+</div>
+
+<h2 id="grades"><span class="num">GRADED BY THE RUBRIC</span>Five questions, asked of every file</h2>
+<p>Every Hive case file is graded on the same five-part rubric: power, transparency, financial accountability, environmental impact and community impact. The grades are about this deal and process, not about anyone's reputation.</p>
+<div class="tbl-wrap"><table class="rub" style="min-width:0">
+  <tr><th>Criterion</th><th>Grade</th><th>Why</th></tr>
+  <tr><td class="first">Power</td><td class="gcell"><span class="grade g-C">C</span></td><td class="why">The county kept its say over zoning and used it in public. A state adviser then said the county's funding was at risk over that decision, which the Governor's Office walked back 10 days later. One trust board seat serves at the governor's pleasure.</td></tr>
+  <tr><td class="first">Transparency</td><td class="gcell"><span class="grade g-B">B−</span></td><td class="why">The trust posted the appraisal, the projected return, the conditions and the deadline in a public board packet. Missing from what was reviewed: the trust's share, the vote, and the water letters.</td></tr>
+  <tr><td class="first">Financial accountability</td><td class="gcell"><span class="grade g-C">C</span></td><td class="why">The return to the school trust is stated plainly. The public costs of 100+ homes on land zoned for 5 are not stated in the trust's materials, and would fall on the county.</td></tr>
+  <tr><td class="first">Environmental impact</td><td class="gcell"><span class="grade g-B">B−</span></td><td class="why">Water was made a condition of the deal, and the county weighed water and wildfire risk before saying no. Whether enough water exists has not been shown publicly.</td></tr>
+  <tr><td class="first">Community impact</td><td class="gcell"><span class="grade g-C">C</span></td><td class="why">Residents were heard through the county's public process, and that process decided the outcome. The same area now faces a larger new-town proposal where the county has no vote.</td></tr>
+  <tr><td class="first"><b>Overall</b></td><td class="gcell"><span class="grade g-C">C+</span></td><td class="why">Simple average of the five grades above.</td></tr>
+</table></div>
+
+<div class="bottomline"><div class="k">The bottom line</div><p>The state's own paperwork shows the trust land is worth about 4.4 times more to the school trust with 100 homes than with 5. The developer needs the county to approve that density, and in August 2026 the county declined. The option runs until Jan. 1, 2027.</p></div>
+
+<details class="src" id="sources"><summary>Sources &amp; documents ▾</summary><div class="inner">
+<h5>Primary</h5>
+<ol>
+<li>Trust Lands Administration, Board of Trustees packet, Sept. 19, 2024, item "Amendment to Mountain Venture Studios Mutual Option Agreement: DEVL 1297 With Philo Development" — <a href="https://www.utah.gov/pmn/files/1170083.pdf">utah.gov/pmn/files/1170083.pdf</a> <span class="how">(posted PDF, text read directly)</span></li>
+<li>Trust Lands Administration, Board of Trustees page (board seats, terms) — <a href="https://trustlands.utah.gov/about-us/board-of-trustees/">trustlands.utah.gov</a> <span class="how">(read Aug. 29, 2026)</span></li>
+<li>Utah Division of Corporations, Philo Development Group, LLC, entity 13120459-0160.</li>
+<li>Wasatch County, "Preliminary Municipalities Report: Flaws in Existing Statutory Processes," and Resolution 26-11, attachments to the Sept. 2, 2026 council agenda <span class="how">(PDF read directly)</span></li>
+<li>Wasatch County Government, official Facebook post on the Aug. 28, 2026 meeting with the Governor's Office.</li>
+</ol>
+<h5>News and secondary</h5>
+<ol>
+<li>Park Record, Clara Hatcher, "Adviser invokes governor in threatening to cut state funding from Wasatch County over development decisions," Aug. 21, 2026.</li>
+<li>KPCW, Grace Doerfler, "'Counties who openly declare war': Gov. threatens to pull funding over Wasatch Back development clash," Aug. 21, 2026.</li>
+<li>Keye Team real estate blog, Nikki Keye, Aug. 14, 2026 (account of the Aug. 12 work meeting; secondary).</li>
+<li>Park Record, Clara Hatcher, on the Wasatch Highlands feasibility request and phases, Feb. 20, 2026.</li>
+</ol>
+<p class="how">Hive calculations are labeled where they appear. We did not request comment; this file reports what the public record shows.</p>
+</div></details>
+
+</main>
+
+<footer class="hb-foot"><img src="hive-bee.png" alt="" onerror="this.style.display='none'"><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span><span class="hb-sub" style="margin-top:8px"><a href="https://webercountyhive.substack.com">webercountyhive.substack.com</a></span></footer>
+
+<script>
+(function(){
+  document.querySelectorAll('.flip .inner').forEach(function(b){
+    function flip(){ var f=b.parentElement; var on=!f.classList.contains('on'); f.classList.toggle('on', on); b.setAttribute('aria-pressed', on?'true':'false'); }
+    b.addEventListener('click', flip);
+    b.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); flip(); } });
+  });
+  function runCount(el){
+    var target=parseFloat(el.dataset.count), dec=parseInt(el.dataset.dec||'0',10), pre=el.dataset.pre||'', suf=el.dataset.suf||'';
+    function fmt(v){ return pre + (dec? v.toFixed(dec) : Math.round(v).toLocaleString('en-US')) + suf; }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){ el.textContent=fmt(target); return; }
+    var start=null, dur=1100;
+    function step(t){ if(!start) start=t; var p=Math.min((t-start)/dur,1); el.textContent=fmt(target*(1-Math.pow(1-p,3))); if(p<1) requestAnimationFrame(step); else el.textContent=fmt(target); }
+    requestAnimationFrame(step);
+  }
+  var counters=document.querySelectorAll('[data-count]');
+  if ('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ runCount(e.target); io.unobserve(e.target);} }); }); counters.forEach(function(c){ io.observe(c); }); }
+})();
+</script>
+</body>
+</html>
