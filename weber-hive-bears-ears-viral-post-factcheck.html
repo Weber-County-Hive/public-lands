@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viral Bears Ears Post Checked</title>
+<meta name="description" content="A claim-by-claim check of a widely shared Facebook post about Bears Ears and Grand Staircase-Escalante, against court opinions, proclamations, management plans and agency data.">
+<link rel="icon" type="image/png" href="hive-bee.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&family=Cinzel:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --ink:#141414; --muted:#5A5A5A; --rule:#E4DED0;
+  --gold:#9C7A1F; --gold-bright:#D4AF37; --gold-soft:#F7F1E1;
+  --black:#0A0A0A; --panel:#FAF8F3;
+  --red:#A63D2F; --red-soft:#F6E6E2; --green:#3E7A4F; --green-soft:#E4F0E7; --blue:#35607F; --blue-soft:#E3ECF3; --amber:#9A6A12; --amber-soft:#F8EDD5;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Newsreader',Georgia,serif;font-size:19px;line-height:1.6}
+a{color:var(--gold);text-underline-offset:3px}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+
+.topbar{background:#000;color:#BDBDBD;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em}
+.topbar .wrap{display:flex;justify-content:space-between;gap:10px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.topbar a{color:var(--gold-bright);text-decoration:none}
+.topbar a:hover{text-decoration:underline}
+
+.mast{background:var(--black);color:#F4E9DD;padding:30px 0 28px;text-align:center;border-bottom:4px solid var(--gold-bright)}
+.hex{width:46px;height:52px;margin:0 auto 10px;display:block}
+.pub{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-bright)}
+.mast h1{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(30px,6vw,48px);line-height:1.1;margin:14px auto 12px;max-width:700px;padding:0 16px}
+.dek{font-style:italic;color:#C9A878;font-size:20px;max-width:620px;margin:0 auto;padding:0 16px}
+.dateline{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9A9A9A;margin-top:16px;letter-spacing:.06em;padding:0 16px}
+
+main{padding:30px 0 50px}
+h2{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(24px,4.4vw,31px);line-height:1.2;margin:52px 0 12px;scroll-margin-top:16px}
+h2 .num{display:block;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.14em;color:var(--gold);margin-bottom:4px}
+h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:21px;margin:30px 0 8px}
+p{margin:0 0 16px}
+.lede{font-size:21px}
+.small{font-size:15px;color:var(--muted)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:8px 0 26px}
+.stat{background:var(--black);color:#F4E9DD;padding:14px 12px;border-top:3px solid var(--gold-bright);border-radius:2px}
+.stat .n{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(22px,4vw,30px);color:var(--gold-bright);line-height:1.1}
+.stat .l{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;color:#CFC6B8;margin-top:6px;line-height:1.35}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+.readerbox{border:1px solid var(--rule);border-left:4px solid var(--black);background:var(--panel);padding:16px 18px;margin:18px 0}
+.readerbox .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.readerbox p:last-child{margin-bottom:0}
+.toc{font-family:'IBM Plex Mono',monospace;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 14px;margin:10px 0 0;padding:0;list-style:none}
+.toc a{text-decoration:none;border-bottom:1px solid var(--gold-bright);color:var(--ink)}
+
+.callout{background:var(--gold-soft);border-left:4px solid var(--gold-bright);padding:16px 18px;margin:22px 0;border-radius:2px}
+.callout p:last-child{margin-bottom:0}
+
+.flips{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}
+@media(max-width:600px){.flips{grid-template-columns:1fr}}
+.flip{perspective:1000px}
+.flip .inner{display:grid;width:100%;cursor:pointer;transform-style:preserve-3d;transition:transform .55s ease}
+.flip.on .inner{transform:rotateY(180deg)}
+.flip .face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid var(--rule);border-radius:3px;padding:16px;display:flex;flex-direction:column;min-height:200px}
+.flip .front{background:#fff;border-top:4px solid var(--gold-bright)}
+.flip .back{background:var(--black);color:#F4E9DD;transform:rotateY(180deg);border-top:4px solid var(--gold-bright);font-size:15px;line-height:1.5}
+.flip .back p{margin:6px 0 10px}
+.flip .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.flip .back .k{color:var(--gold-bright)}
+.flip .t{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:20px;line-height:1.25;margin:6px 0}
+.flip .d{font-size:16px;color:var(--muted);line-height:1.45}
+.flip .hint{margin-top:auto;padding-top:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:.08em}
+.flip .back .hint{color:#9A9A9A}
+.flip .back dl{margin:4px 0 8px}
+.flip .back dt{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold-bright);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+.flip .back dd{margin:0}
+.flip .inner:focus-visible{outline:3px solid var(--gold-bright);outline-offset:3px}
+
+.verdicts{display:grid;gap:12px;margin:18px 0}
+.verdict{border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.verdict .claim{background:var(--panel);padding:12px 16px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.verdict .claim q{font-style:italic;font-size:17px;flex:1 1 300px}
+.chip{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:2px;white-space:nowrap;border:1.5px solid}
+.chip.sup{color:var(--green);background:var(--green-soft);border-color:var(--green)}
+.chip.part{color:var(--amber);background:var(--amber-soft);border-color:var(--amber)}
+.chip.no{color:var(--red);background:var(--red-soft);border-color:var(--red)}
+.verdict .rec{padding:12px 16px;font-size:16px}
+.verdict .rec p:last-child{margin-bottom:0}
+
+.ex{border:1px solid var(--rule);border-radius:3px;margin:18px 0;overflow:hidden}
+.ex-h{background:var(--black);color:#F4E9DD;padding:10px 14px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
+.ex-h .n{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px}
+.ex-h .y{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold-bright);letter-spacing:.08em}
+.ex-b{padding:14px 16px 6px;font-size:17px}
+.ex-b ul{margin:0 0 12px;padding-left:20px}
+.ex-b li{margin-bottom:6px}
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:2px;margin:0 4px 10px 0}
+.tag.benefit{background:var(--green-soft);color:var(--green)}
+.tag.question{background:var(--red-soft);color:var(--red)}
+.tag.status{background:var(--blue-soft);color:var(--blue)}
+.ex details{border-top:1px dashed var(--rule);margin:6px 0 10px}
+.ex details summary{padding:8px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;color:var(--gold)}
+
+.tbl-wrap{overflow-x:auto;margin:16px 0 22px;border:1px solid var(--rule);border-radius:3px}
+table{width:100%;border-collapse:collapse;font-size:15.5px;min-width:520px}
+th,td{border-bottom:1px solid var(--rule);padding:9px 10px;text-align:left;vertical-align:top}
+th{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--panel)}
+tr:last-child td{border-bottom:0}
+td.first{font-weight:600}
+.grade{display:inline-block;min-width:30px;text-align:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;padding:2px 6px;border-radius:2px;color:#fff}
+.g-A,.g-B{background:var(--green)}.g-C{background:var(--amber)}.g-D,.g-F{background:var(--red)}
+table.grades{min-width:760px}td.gc{text-align:center;white-space:nowrap}
+@media(max-width:640px){
+  table.grades{min-width:0}
+  table.grades tr:first-child{display:none}
+  table.grades tr{display:block;border-bottom:1px solid var(--rule);padding:8px 0}
+  table.grades td{display:block;border:0;padding:3px 12px}
+  table.grades td.gc{display:inline-block;padding:4px 6px 4px 12px;text-align:left}
+  table.grades td.gc::before{content:attr(data-l) " ";font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+}
+
+
+.diagram{border:1px solid var(--rule);background:var(--panel);border-radius:3px;padding:14px;margin:20px 0}
+.diagram .cap{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.diagram .mermaid{text-align:center;overflow-x:auto;font-family:'IBM Plex Mono',monospace;font-size:13px;white-space:pre-wrap;margin:0;background:none}
+.diagram .mermaid svg{max-width:100%;height:auto}
+.diagram .alt{font-size:14px;color:var(--muted);margin:10px 0 0}
+
+.viz{border:1px solid var(--rule);background:var(--panel);padding:16px;margin:22px 0;border-radius:3px}
+.viz-h{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px}
+.viz-title{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:19px;margin-bottom:6px}
+.toggle{display:flex;gap:6px}
+.toggle button{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;border:1px solid var(--black);background:#fff;color:var(--black);padding:6px 10px;cursor:pointer;border-radius:2px}
+.toggle button[aria-pressed="true"]{background:var(--black);color:var(--gold-bright)}
+.bars{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bar-row{display:grid;grid-template-columns:130px 1fr;gap:10px;align-items:center}
+.bar-lab{font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.3;color:var(--muted)}
+.bar-lab strong{display:block;color:var(--ink);font-size:13px}
+.bar-track{background:#EDE8DC;height:30px;position:relative;border-radius:2px}
+.bar-fill{height:100%;background:var(--gold-bright);transition:width .6s ease;border-radius:2px}
+.bar-fill.cut{background:var(--red)}
+.bar-val{position:absolute;left:8px;top:50%;transform:translateY(-50%);font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:var(--black);white-space:nowrap}
+.viz-cap{font-size:14px;color:var(--muted);margin:12px 0 0}
+@media(max-width:480px){.bar-row{grid-template-columns:96px 1fr}}
+
+.tl{margin:22px 0;border:1px solid var(--rule);border-radius:3px;background:#fff}
+.tl-dots{display:flex;overflow-x:auto;padding:14px 12px 8px;border-bottom:1px solid var(--rule);scrollbar-width:thin}
+.tl-dot{flex:0 0 auto;background:none;border:0;cursor:pointer;padding:4px 8px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)}
+.tl-dot span{display:block;width:14px;height:14px;border-radius:50%;margin:0 auto 5px;border:2px solid var(--black);background:#fff}
+.tl-dot.x span{background:var(--gold-bright)}.tl-dot.m span{background:var(--red)}.tl-dot.t span{background:var(--blue)}.tl-dot.e span{background:var(--green)}
+.tl-dot[aria-selected="true"]{color:var(--black);font-weight:600}
+.tl-dot[aria-selected="true"] span{box-shadow:0 0 0 3px var(--gold-soft),0 0 0 5px var(--gold-bright)}
+.tl-panel{padding:14px 16px 16px;min-height:130px}
+.tl-panel .yr{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold);letter-spacing:.1em}
+.tl-panel .hd{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:19px;margin:2px 0 6px}
+.tl-panel p{font-size:16px;margin:0}
+.legend{display:flex;flex-wrap:wrap;gap:12px;padding:0 16px 12px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--black);margin-right:5px;vertical-align:-1px}
+
+.pattern{border:1px solid var(--rule);background:var(--panel);border-radius:3px;padding:16px;margin:20px 0}
+.prow{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center;margin:8px 0}
+.ptrack{display:flex;height:28px;background:#EDE8DC;border-radius:2px;overflow:hidden}
+.seg{display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;min-width:22px}
+.seg.pp{background:#0A0A0A;color:#D4AF37}.seg.pd{background:#BDB39F;color:#141414}.seg.pv{background:#FFFFFF;color:#141414;border-left:1px solid #BDB39F}
+.pkey{display:flex;gap:14px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:10px}
+.pkey i{display:inline-block;width:12px;height:12px;vertical-align:-2px;margin-right:5px;border:1px solid #BDB39F}
+.bigthree{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+@media(max-width:600px){.bigthree{grid-template-columns:1fr}}
+.bigthree div{border-top:4px solid var(--gold-bright);background:#fff;border:1px solid var(--rule);padding:12px 14px;font-size:15.5px}
+.bigthree b{display:block;font-family:'Fraunces',Georgia,serif;font-size:26px;line-height:1.1;margin-bottom:4px}
+
+.kd{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+@media(max-width:640px){.kd{grid-template-columns:1fr}}
+.kd > div{border:1px solid var(--rule);border-radius:3px;padding:14px 16px}
+.kd h4{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px}
+.kd .know{border-top:4px solid var(--green)} .kd .know h4{color:var(--green)}
+.kd .dont{border-top:4px solid var(--amber)} .kd .dont h4{color:var(--amber)}
+.kd ul{margin:0;padding-left:18px;font-size:16px}
+.kd li{margin-bottom:6px}
+.bottomline{background:var(--black);color:#F4E9DD;padding:20px 22px;border-left:5px solid var(--gold-bright);margin:22px 0;border-radius:2px}
+.bottomline .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--gold-bright);text-transform:uppercase;margin-bottom:6px}
+.bottomline p:last-child{margin-bottom:0}
+
+.lookup{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+@media(max-width:600px){.lookup{grid-template-columns:1fr}}
+.lk{border:1px solid var(--rule);padding:12px 14px;border-radius:3px;font-size:15.5px}
+.lk a{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:17px;display:block;margin-bottom:2px}
+
+details.src{border:1px solid var(--rule);border-radius:3px;margin:26px 0;background:var(--panel)}
+details.src > summary{cursor:pointer;padding:12px 16px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--black)}
+details.src .inner{padding:0 18px 14px;font-size:15px}
+details.src h5{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:14px 0 6px}
+details.src ol{padding-left:26px;margin:0}
+details.src li{margin-bottom:7px;word-break:break-word}
+.how{color:var(--muted);font-size:13.5px}
+
+footer{background:var(--black);color:#9A9A9A;text-align:center;padding:24px 16px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em}
+footer .f1{color:var(--gold-bright);text-transform:uppercase;letter-spacing:.24em;margin-bottom:6px}
+footer a{color:#CFC6B8}
+</style>
+<style>
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1200px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+.hb-foot a{color:#b8956a;}
+@media(max-width:600px){.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}}
+</style>
+
+<style>
+.chip.unk{color:var(--blue);background:var(--blue-soft);border-color:var(--blue)}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px}
+.filters button{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;border:1px solid var(--black);background:#fff;color:var(--black);padding:7px 11px;cursor:pointer;border-radius:2px}
+.filters button[aria-pressed="true"]{background:var(--black);color:var(--gold-bright)}
+.verdict .rec .src{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-top:8px}
+.verdict .num{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:.1em;display:block;margin-bottom:2px}
+.verdict .claim .q{font-style:italic;font-size:17px;flex:1 1 300px}
+.secnote{font-size:16px;color:var(--muted);margin:-4px 0 10px}
+.counter{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.counter div{border:1px solid var(--rule);border-top:3px solid var(--gold-bright);padding:10px;text-align:center;background:#fff}
+.counter b{display:block;font-family:'Fraunces',Georgia,serif;font-size:26px}
+.counter span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
+@media(max-width:600px){.counter{grid-template-columns:repeat(2,1fr)}}
+.diagram.big .mermaid{font-size:17px}
+ol.qs{padding-left:22px}ol.qs li{margin-bottom:12px}ol.qs .who{display:block;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo" onerror="this.style.display='none'"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="topbar"><div class="wrap"><a href="index.html">← PUBLIC-LANDS · ALL FILES</a><span>FACT-CHECK 01</span></div></div>
+
+<header class="mast">
+  <svg class="hex" viewBox="0 0 46 52" aria-hidden="true"><polygon points="23,2 44,14 44,38 23,50 2,38 2,14" fill="none" stroke="#D4AF37" stroke-width="2.5"/><circle cx="23" cy="26" r="4" fill="#D4AF37"/></svg>
+  <div class="pub">Utah Hive Politics</div>
+  <h1>The Viral Bears Ears Post, Checked Against the Record</h1>
+  <p class="dek">A widely shared Facebook post about Bears Ears and Grand Staircase-Escalante makes 38 checkable claims. We checked each one against court opinions, proclamations, management plans and agency data.</p>
+  <div class="dateline">FACT-CHECK · PUBLISHED OCTOBER 24, 2026 · UPDATED OCTOBER 24, 2026</div>
+</header>
+
+<main class="wrap">
+
+<div class="stats" aria-label="Results">
+  <div class="stat"><div class="n">18</div><div class="l">claims supported by the record</div></div>
+  <div class="stat"><div class="n">9</div><div class="l">partly supported</div></div>
+  <div class="stat"><div class="n">6</div><div class="l">not supported</div></div>
+  <div class="stat"><div class="n">5</div><div class="l">unconfirmed or opinion</div></div>
+</div>
+
+<div class="readerbox">
+  <div class="k">New here? Start with this</div>
+  <p><b>The short version:</b> Most of the post's quotes and numbers hold up, including several that sound like spin but are on the record. The errors are about timing, one board seat, coal, and the access numbers. Our read of the record: a monument's boundary decides what is protected, and its management plan decides which roads and trails are open. The post gets that distinction right, then overstates some of the numbers it uses to make the point.</p>
+  <p><b>About the post:</b> It is an opinion piece shared across Facebook groups. We don't name its author. We graded only claims a record can check; lines that are the writer's opinion are marked that way.</p>
+</div>
+
+<ul class="toc" aria-label="Sections">
+  <li><a href="#claims">The claims</a></li><li><a href="#sizes">The acreage</a></li><li><a href="#access">Who decides access</a></li><li><a href="#ask">Questions to ask</a></li><li><a href="#sources">Sources</a></li>
+</ul>
+
+<h2 id="claims"><span class="num">01</span>Claim by claim</h2>
+<p>Tap a button to show only one kind of result.</p>
+<div class="filters" role="group" aria-label="Filter claims">
+  <button type="button" data-f="all" aria-pressed="true">All (38)</button>
+  <button type="button" data-f="sup" aria-pressed="false">Supported (18)</button>
+  <button type="button" data-f="part" aria-pressed="false">Partly (9)</button>
+  <button type="button" data-f="no" aria-pressed="false">Not supported (6)</button>
+  <button type="button" data-f="unk" aria-pressed="false">Unconfirmed / opinion (5)</button>
+</div>
+<h3>The timing</h3>
+<p class="secnote">The post is written as if the order came this week.</p>
+<div class="verdicts">
+<div class="verdict" data-v="no"><div class="claim"><div class="q"><span class="num">CLAIM 01</span>The order came “on Monday” and this is the week everyone is posting about it.</div><span class="chip no">Not supported</span></div><div class="rec"><p>The proclamations were signed July 13, 2026. This week's news is different: a federal judge in Washington, D.C. reopened the 2017 lawsuits over the first cuts, and ordered 48 hours' notice before ground-disturbing work on the removed lands. A reshared copy of the post reads as current when it isn't.</p><div class="src">Sources: [1] [20] [21]</div></div></div>
+</div>
+<h3>“The largest rollback in history”</h3>
+<p class="secnote">The post's history of the two monuments.</p>
+<div class="verdicts">
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 02</span>Clinton designated Grand Staircase in 1996, signing it from the rim of the Grand Canyon in Arizona.</div><span class="chip sup">Supported</span></div><div class="rec"><p>The National Park Service's report for Sept. 23, 1996 says Clinton spoke near El Tovar Lodge on the canyon's rim and signed the proclamation at the Powell Memorial.</p><div class="src">Sources: [2]</div></div></div>
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 03</span>Five maps in thirty years: 1996, 2016, 2017, 2021, 2026, and about 3.25 million acres moving back and forth without a vote in Congress.</div><span class="chip sup">Supported</span></div><div class="rec"><p>The dates match the record. Biden's 2021 proclamations reserved 3.23 million acres for the two monuments together, according to the Tenth Circuit opinion. All five changes were made by presidential proclamation under the Antiquities Act.</p><div class="src">Sources: [3] [1]</div></div></div>
+</div>
+<h3>“The courts have settled this”</h3>
+<p class="secnote">What the Tenth Circuit actually decided.</p>
+<div class="verdicts">
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 04</span>The Tenth Circuit sent the challenge back, said courts can review whether a president exceeded the Antiquities Act, and told the district court to interpret the law's limits “in the first instance.”</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate. On June 23, 2026 the court affirmed in part, vacated in part and remanded. The opinion says the Act “places discernible limits” on the President and that courts would “undermine rather than honor congressional intent” by refusing to enforce them. Two things the post leaves out: it was a 2–1 decision with a written dissent (Judge Federico), and the court did not decide whether the monuments actually exceeded the limits.</p><div class="src">Sources: [3]</div></div></div>
+<div class="verdict" data-v="part"><div class="claim"><div class="q"><span class="num">CLAIM 05</span>“Nobody had done it. Not once, in a hundred and twenty years.”</div><span class="chip part">Partly</span></div><div class="rec"><p>Partly. The majority notes the U.S. Supreme Court has reviewed presidential actions under the Antiquities Act three times (1920, 1976, 1978). What no court of appeals had done, according to the district court's own order quoted in the opinion, is interpret the “smallest area compatible” requirement.</p><div class="src">Sources: [3]</div></div></div>
+<div class="verdict" data-v="part"><div class="claim"><div class="q"><span class="num">CLAIM 06</span>BlueRibbon Coalition was part of that case, alongside the State of Utah.</div><span class="chip part">Partly</span></div><div class="rec"><p>BlueRibbon was a plaintiff. But the Tenth Circuit affirmed the dismissal of BlueRibbon's and the individual plaintiffs' claims because they did not argue standing in their opening brief. Utah, Garfield County and Kane County remain in the case.</p><div class="src">Sources: [3]</div></div></div>
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 07</span>Chief Justice Roberts wrote in 2021 that the “smallest area” restriction had “ceased to pose any meaningful restraint.”</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate quote. It came from a statement respecting the denial of certiorari in <i>Massachusetts Lobstermen's Ass'n v. Raimondo</i> (2021). It is not a ruling.</p><div class="src">Sources: [3] [4]</div></div></div>
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 08</span>Bryce Canyon 35,835 acres; Arches 76,679; Zion 146,597; Capitol Reef 241,904; Canyonlands 337,598. Bears Ears 1.36 million; Grand Staircase 1.87 million.</div><span class="chip sup">Supported</span></div><div class="rec"><p>The National Park Service's official acreage listing matches for Bryce Canyon, Arches, Capitol Reef and Canyonlands. The Zion figure matches a published listing; we did not read it in the NPS listing itself. The monument figures are their sizes before July 13, 2026.</p><div class="src">Sources: [5] [1]</div></div></div>
+</div>
+<h3>“A gift to oil and mining”</h3>
+<p class="secnote">Energy and mineral claims.</p>
+<div class="verdicts">
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 09</span>The Western Energy Alliance said Bears Ears has never been a significant oil and natural gas prospect, in the New York Times article everyone is sharing.</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate. The statement came from Melissa Simpson, the group's president, in the New York Times article of July 14, 2026.</p><div class="src">Sources: [6]</div></div></div>
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 10</span>A 2021 Utah Geological Survey report found low to moderate energy mineral potential in both monuments.</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate. These are two March 2021 Utah Geological Survey resource overviews (Public Information Series 102 for Bears Ears and 103 for Grand Staircase). The Grand Staircase report also rates coal potential as high.</p><div class="src">Sources: [7] [8]</div></div></div>
+<div class="verdict" data-v="part"><div class="claim"><div class="q"><span class="num">CLAIM 11</span>“Grand Staircase does sit on coal.” The removed land isn't about mining.</div><span class="chip part">Partly</span></div><div class="rec"><p>The coal part is accurate. But both July 2026 proclamations themselves cite critical minerals and national security as grounds, and the removed lands opened to mining claims and mineral leasing 60 days later (Sept. 11). Utah's mining association president said there is “definitely potential.”</p><div class="src">Sources: [1] [9] [10]</div></div></div>
+<div class="verdict" data-v="no"><div class="claim"><div class="q"><span class="num">CLAIM 12</span>“Coal use in this country falls every single year.”</div><span class="chip no">Not supported</span></div><div class="rec"><p>Not supported. The U.S. Energy Information Administration forecast a 6% increase in U.S. coal consumption for 2025, followed by a decrease in 2026. The long-term trend is down, but not every year.</p><div class="src">Sources: [11]</div></div></div>
+</div>
+<h3>The Wyss section</h3>
+<p class="secnote">Claims about Hansjörg Wyss, the Swiss donor.</p>
+<div class="verdicts">
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 13</span>Hansjörg Wyss is Swiss, born in Bern, made his fortune in medical devices, and sold the company to Johnson & Johnson for over $20 billion.</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate. Johnson & Johnson's 2012 annual report says it completed the acquisition of Synthes for a purchase price of $20.2 billion in cash and stock.</p><div class="src">Sources: [12] [13]</div></div></div>
+<div class="verdict" data-v="part"><div class="claim"><div class="q"><span class="num">CLAIM 14</span>He has given more than $350 million to groups shaping public lands policy, and his foundation holds around $2.5 billion.</div><span class="chip part">Partly</span></div><div class="rec"><p>The $350 million figure is from a 2015 E&E News profile; a later figure puts public-land giving above $450 million as of 2018. The $2.5 billion figure is not supported by what we found: the foundation's endowment was reported at $1.71 billion as of 2023.</p><div class="src">Sources: [14] [15]</div></div></div>
+<div class="verdict" data-v="part"><div class="claim"><div class="q"><span class="num">CLAIM 15</span>He sits on the board of directors of the Southern Utah Wilderness Alliance. “It's on Wyss' own Wikipedia, that lists him as current Board of Directors.”</div><span class="chip part">Partly</span></div><div class="rec"><p>Past tense is accurate: SUWA's 2005 newsletter says he had served on its board for ten years and as chair for seven, and he was still listed in its Autumn/Winter 2020 newsletter. Present tense is not: SUWA's own board page (updated April 2026) lists ten directors and two emeriti, and he is not among them. The Wikipedia listing appears to be out of date.</p><div class="src">Sources: [16] [17] [18]</div></div></div>
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 16</span>SUWA announced right away that it would sue.</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate. SUWA's executive director said in the July 14 New York Times article that the group would challenge the decision in federal court.</p><div class="src">Sources: [6]</div></div></div>
+<div class="verdict" data-v="part"><div class="claim"><div class="q"><span class="num">CLAIM 17</span>Wyss also sits on the governing council of the Wilderness Society and the board of the Grand Canyon Trust.</div><span class="chip part">Partly</span></div><div class="rec"><p>The Wilderness Society's governing council page lists him (at large, since 1993). For the Grand Canyon Trust, a business-records listing names him as a trustee, but we could not load the Trust's own board page to confirm it.</p><div class="src">Sources: [19] [15]</div></div></div>
+<div class="verdict" data-v="unk"><div class="claim"><div class="q"><span class="num">CLAIM 18</span>“He has never lived in Utah.”</div><span class="chip unk">Unconfirmed / opinion</span></div><div class="rec"><p>Unconfirmed. We found no record either way.</p></div></div>
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 19</span>He says the Alps were already lost: too many ski lifts, too many resorts, too many hotels.</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate. He gave that answer to the Associated Press in 2010. The post's next line (“too many people is the part he doesn't say”) is the author's opinion and can't be checked.</p><div class="src">Sources: [14] [22]</div></div></div>
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 20</span>The Wilderness Society gave him an award and praised him for keeping public lands pristine.</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate. He received the Robert Marshall Award in 2011, and the award announcement used the word “pristine.”</p><div class="src">Sources: [23]</div></div></div>
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 21</span>In 2013 his foundation moved roughly $19 million to groups lobbying for new wilderness and monuments, and for curbs on drilling, mining and grazing.</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate. E&E News reported this from the foundation's IRS Form 990.</p><div class="src">Sources: [14]</div></div></div>
+</div>
+<h3>“A monument doesn't take away access”</h3>
+<p class="secnote">The management plan, the V Road and the Cosmic Ashtray.</p>
+<div class="verdicts">
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 22</span>The proclamation doesn't manage the land; the management plan does, and it comes later.</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate. Each proclamation directs the agency to write a management plan, and the plan sets roads, grazing, camping and other uses. Grand Staircase's first plan came in 2000; the current one was signed Jan. 6, 2025. Bears Ears' plan was signed the same month.</p><div class="src">Sources: [24] [25]</div></div></div>
+<div class="verdict" data-v="part"><div class="claim"><div class="q"><span class="num">CLAIM 23</span>The 2025 Grand Staircase plan designated about 1.23 million acres “primitive,” two-thirds of the monument, closed to motorized access.</div><span class="chip part">Partly</span></div><div class="rec"><p>The acreage is accurate (about 1,227,100 acres). “Closed to motorized access” goes too far: the plan's record of decision says that apart from the V Road, it keeps the existing travel network from the 2020 plans. The primitive areas are closed to off-route driving, not to every road.</p><div class="src">Sources: [25] [26]</div></div></div>
+<div class="verdict" data-v="unk"><div class="claim"><div class="q"><span class="num">CLAIM 24</span>Public comments and local governments' input were ignored.</div><span class="chip unk">Unconfirmed / opinion</span></div><div class="rec"><p>Not something a record can settle. The plan followed a two-year public process with more than 30 engagement meetings; whether input was “ignored” is an opinion.</p><div class="src">Sources: [27]</div></div></div>
+<div class="verdict" data-v="no"><div class="claim"><div class="q"><span class="num">CLAIM 25</span>“The V Road is seven miles.”</div><span class="chip no">Not supported</span></div><div class="rec"><p>Not supported. Driving guides put the V Road itself at about 3.25 miles. The Harris Wash road and the V Road together run about 9.7 miles from Hole-in-the-Rock Road.</p><div class="src">Sources: [28] [29]</div></div></div>
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 26</span>You used to drive the V Road, park, and walk about two miles round trip to the Cosmic Ashtray; the 2025 plan shut the road.</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate. From the end of the V Road the approach is about 1.1 miles each way, and the 2025 plan closed the V Road.</p><div class="src">Sources: [29] [26]</div></div></div>
+<div class="verdict" data-v="no"><div class="claim"><div class="q"><span class="num">CLAIM 27</span>“That two-mile hike is now roughly twenty miles round trip.”</div><span class="chip no">Not supported</span></div><div class="rec"><p>Not supported. Without the V Road, the southern approach from Harris Wash is about 9 miles round trip, and the approach from Spencer Flat Road is about 8.3 miles round trip.</p><div class="src">Sources: [30]</div></div></div>
+<div class="verdict" data-v="part"><div class="claim"><div class="q"><span class="num">CLAIM 28</span>The July order came with no new management plan, so the Biden plans still stand.</div><span class="chip part">Partly</span></div><div class="rec"><p>Partly. Congress's attempt to throw out the 2025 Grand Staircase plan missed its fast-track deadline in June 2026, so that plan was not repealed. But the 2026 Bears Ears proclamation sets its own interim road rules: until a new plan is done, agencies may allow motorized use on routes designated before 2016 and may add routes. Interior has one year to update the plans. We could not confirm which plan governs the removed Grand Staircase lands today.</p><div class="src">Sources: [31] [32] [9] [10]</div></div></div>
+<div class="verdict" data-v="no"><div class="claim"><div class="q"><span class="num">CLAIM 29</span>“The shrink didn't open a single gate.”</div><span class="chip no">Not supported</span></div><div class="rec"><p>Not supported for mining and leasing: the removed lands opened to mining claims and mineral and geothermal leasing on Sept. 11, 2026, and prospectors filed claims. For roads, see the item above.</p><div class="src">Sources: [9] [33]</div></div></div>
+</div>
+<h3>“Vandals will destroy the rock art”</h3>
+<p class="secnote">Enforcement and the Zuni quote.</p>
+<div class="verdicts">
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 30</span>The Zuni head councilman told the New York Times that even now, with the boundaries not reduced, they still run into that trouble.</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate. The speaker was Anthony Sanchez Jr., head council member for the Pueblo of Zuni and co-chair of the Bears Ears Inter-Tribal Coalition.</p><div class="src">Sources: [6]</div></div></div>
+<div class="verdict" data-v="unk"><div class="claim"><div class="q"><span class="num">CLAIM 31</span>A monument designation does not add a single ranger, patrol or dollar of enforcement.</div><span class="chip unk">Unconfirmed / opinion</span></div><div class="rec"><p>Not checked. We did not find a record that settles this either way.</p></div></div>
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 32</span>Removed land goes back to the BLM, the same agency whose law enforcement prosecuted an artifact case near Bears Ears.</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate. Removed land returns to its prior federal management. The case is real: a 2009 BLM-FBI operation led to indictments by a Salt Lake City grand jury of people from Utah, New Mexico and Colorado for looting artifacts in the Four Corners.</p><div class="src">Sources: [34] [1]</div></div></div>
+</div>
+<h3>“An attack on Native Americans”</h3>
+<p class="secnote">The Chuckwalla proclamation.</p>
+<div class="verdicts">
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 33</span>The Chuckwalla proclamation (California, January 2025) describes trails Tribes “evoke and visit through songs and dreams,” and finds its 624,270 acres are “the smallest area compatible.”</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate quotes from Proclamation 10881, signed Jan. 14, 2025.</p><div class="src">Sources: [35]</div></div></div>
+<div class="verdict" data-v="sup"><div class="claim"><div class="q"><span class="num">CLAIM 34</span>The same proclamation carves out room for renewable energy and preserves utility corridors, transmission lines and new facilities.</div><span class="chip sup">Supported</span></div><div class="rec"><p>Accurate, with context. Existing utility and transmission facilities may be kept, expanded, and new ones built “to the extent consistent with the proper care and management of the objects.” The renewable energy language covers projects in development areas the proclamation describes as near the monument, not inside it.</p><div class="src">Sources: [35]</div></div></div>
+<div class="verdict" data-v="no"><div class="claim"><div class="q"><span class="num">CLAIM 35</span>“The land is too sacred for a Jeep.”</div><span class="chip no">Not supported</span></div><div class="rec"><p>Not supported by the proclamation. It lists motorized recreation among the area's uses and allows motorized vehicles on roads and trails already in BLM's route inventory.</p><div class="src">Sources: [35]</div></div></div>
+<div class="verdict" data-v="unk"><div class="claim"><div class="q"><span class="num">CLAIM 36</span>Tribal opinion is not one thing; there are Native voices on every side.</div><span class="chip unk">Unconfirmed / opinion</span></div><div class="rec"><p>An opinion, not graded. The five tribes of the Bears Ears Inter-Tribal Coalition condemned the July reduction.</p><div class="src">Sources: [1]</div></div></div>
+</div>
+<h3>The closing lines</h3>
+<div class="verdicts">
+<div class="verdict" data-v="unk"><div class="claim"><div class="q"><span class="num">CLAIM 37</span>“A president with a pen and eleven days left in his term.”</div><span class="chip unk">Unconfirmed / opinion</span></div><div class="rec"><p>The post doesn't say which president. The dates in the record: Obama signed Bears Ears on Dec. 28, 2016 (23 days before leaving office). Biden signed Chuckwalla on Jan. 14, 2025 (six days before).</p><div class="src">Sources: [3] [35]</div></div></div>
+<div class="verdict" data-v="part"><div class="claim"><div class="q"><span class="num">CLAIM 38</span>“One law that no court ever bothered to read carefully.”</div><span class="chip part">Partly</span></div><div class="rec"><p>Same as above: the Supreme Court has ruled on Antiquities Act actions three times, but no appeals court had interpreted the “smallest area” limit before the Tenth Circuit sent it back for that.</p><div class="src">Sources: [3]</div></div></div>
+</div>
+
+<h2 id="sizes"><span class="num">02</span>The acreage the post compares</h2>
+<p>The post compares the monuments to Utah's five national parks. Use the buttons to see the monuments before and after July 13, 2026.</p>
+<div class="viz" id="sizeviz">
+  <div class="viz-h"><div class="viz-title">Acres, monuments vs. national parks</div>
+  <div class="toggle"><button type="button" data-m="before" aria-pressed="true">Before July 2026</button><button type="button" data-m="after" aria-pressed="false">After July 2026</button></div></div>
+  <div class="bars" id="sizebars"></div>
+  <p class="viz-cap">Park figures: National Park Service acreage listing (Zion from a published listing). Monument figures: 2021 and 2026 proclamations as reported. Monument bars are red.</p>
+</div>
+
+<h2 id="access"><span class="num">03</span>Who decides what you can drive to</h2>
+<p>The post's main point is that the boundary and the road rules are two different documents. That part is right. Here is how the pieces fit, as of October 2026.</p>
+<div class="diagram big"><div class="cap">The chain of documents</div>
+<pre class="mermaid">
+flowchart TD
+  A["Proclamation<br/>sets the boundary and<br/>what is protected"] --> B["Management plan<br/>sets grazing, camping,<br/>which areas allow vehicles"]
+  B --> C["Travel network<br/>which roads and trails<br/>are open"]
+  A --> D["Land removed from<br/>a monument"]
+  D --> E["Back to the BLM office's<br/>regular plan; open to mining<br/>claims and leasing after 60 days"]
+</pre>
+<p class="alt">Text version: The proclamation sets the boundary. The management plan, written later, sets uses inside it, including which roads stay open. Land removed from a monument goes back to the BLM's regular management and, under the July 2026 proclamations, opened to mining claims and leasing after 60 days.</p></div>
+
+<div class="kd">
+  <div class="know"><h4>What the record shows</h4><ul>
+    <li>The 2025 Grand Staircase plan closed one designated route, the V Road, and kept the rest of the existing road network.</li>
+    <li>Congress's fast-track attempt to throw out that plan missed its June 2026 deadline.</li>
+    <li>The July 2026 Bears Ears proclamation lets agencies allow driving on pre-2016 routes until a new plan is done.</li>
+    <li>Interior has one year from July 13, 2026 to update the plans.</li>
+  </ul></div>
+  <div class="dont"><h4>What we couldn't confirm</h4><ul>
+    <li>Which plan governs the removed Grand Staircase lands today, and whether the V Road closure still applies there.</li>
+    <li>Whether the Volcano/V Road area falls inside or outside the new Grand Staircase boundary.</li>
+  </ul></div>
+</div>
+<div class="callout"><p><b>See the maps:</b> <a href="http://blm-egis.maps.arcgis.com/apps/webappviewer/index.html?id=891e76b4e77b457e8bf66d070f7c2f8b">BLM Utah interactive map (Bears Ears)</a> · <a href="https://www.grandcanyontrust.org/resources/maps-2026-bears-ears-grand-staircase-cuts/">2026 boundary maps</a> (published by the Grand Canyon Trust, a conservation group) · <a href="weber-hive-public-land-changes-hands.html#monuments">Our explainer's monument section</a></p></div>
+
+<h2 id="ask"><span class="num">04</span>Questions to ask, and to whom</h2>
+<ol class="qs">
+  <li><span class="who">BLM Paria River District · 669 S. Hwy 89A, Kanab</span>Which management plan governs the lands removed from Grand Staircase in July 2026, and is the V Road still closed?</li>
+  <li><span class="who">BLM Monticello Field Office · 435-587-1500</span>Which roads and trails are open under the interim direction for the remaining Bears Ears units?</li>
+  <li><span class="who">U.S. Department of the Interior</span>What is the schedule for the updated plans due by July 13, 2027, and when will the public comment periods open?</li>
+  <li><span class="who">Your members of Congress</span>Should monument boundaries be set by Congress instead of by proclamation? The post argues yes; ask where your delegation stands.</li>
+  <li><span class="who">Anyone sharing the post</span>Which of these claims are you relying on? Check the ones marked “not supported” before passing it on.</li>
+</ol>
+
+<div class="bottomline"><div class="k">Bottom line</div>
+<p>The post is right that boundaries change with each president and that the management plan, not the line on the map, decides most access. It is wrong or out of date on the timing, Wyss's current SUWA seat, coal use, the size of the road closures, and the hike distance.</p></div>
+
+<h3>Behind this piece</h3>
+<div class="counter">
+  <div><b>38</b><span>claims checked</span></div>
+  <div><b>35</b><span>records cited</span></div>
+  <div><b>~12</b><span>records checked, not used</span></div>
+  <div><b>~28</b><span>searches run (estimate)</span></div>
+</div>
+
+<details class="src" id="sources"><summary>Sources and how each was read (35)</summary><div class="inner">
+<h5>Records</h5>
+<ol>
+<li><a href="https://moabsunnews.com/2026/07/18/bears-ears-grand-staircase-monument-reduction-trump-2026/">Moab Sun News, “Trump cuts Bears Ears and Grand Staircase monuments again,” July 18, 2026</a> <span class="how">Web page.</span></li>
+<li><a href="https://npshistory.com/morningreport/1996/09-23.htm">National Park Service Morning Report, Sept. 23, 1996</a> <span class="how">Web page.</span></li>
+<li><a href="https://law.justia.com/cases/federal/appellate-courts/ca10/23-4106/23-4106-2026-06-23.html"><i>Garfield County v. Trump</i>, Nos. 23-4106 & 23-4107 (10th Cir. June 23, 2026), majority and dissent</a> <span class="how">Full opinion text on Justia.</span></li>
+<li><a href="https://www.inquirer.com/news/nation-world/trump-reduce-national-monuments-utah-bears-ears-grand-staircase-escalante-antiquities-act-drilling-mining-tribes-navajo-hopi-ute-zuni-20260714.html">New York Times via Philadelphia Inquirer (Roberts quote reprinted), July 14, 2026</a> <span class="how">Web page.</span></li>
+<li><a href="https://irma.nps.gov/Stats/FileDownload/102">National Park Service, Listing of Acreage (Summary)</a> <span class="how">Text extraction of NPS PDF; figures read as printed values.</span></li>
+<li><a href="https://www.inquirer.com/news/nation-world/trump-reduce-national-monuments-utah-bears-ears-grand-staircase-escalante-antiquities-act-drilling-mining-tribes-navajo-hopi-ute-zuni-20260714.html">Maxine Joselow, New York Times, “Trump sharply cuts the size of two national monuments in Utah,” July 14, 2026 (Philadelphia Inquirer reprint)</a> <span class="how">Full article text.</span></li>
+<li><a href="https://ugspub.nr.utah.gov/publications/public_information/pi-102.pdf">Utah Geological Survey, Public Information Series 102, Resource Overview for the Original 2016 Bears Ears National Monument, March 2021</a> <span class="how">Text extraction of PDF; findings are stated ratings, not absences.</span></li>
+<li><a href="https://ugspub.nr.utah.gov/publications/public_information/pi-103.pdf">Utah Geological Survey, Public Information Series 103, Resource Overview for the Original 1996 Grand Staircase–Escalante National Monument, March 2021</a> <span class="how">Text extraction of PDF; findings are stated ratings, not absences.</span></li>
+<li><a href="https://www.whitehouse.gov/presidential-actions/2026/07/modifying-the-grand-staircase-escalante-national-monument/">Proclamation, Modifying the Grand Staircase-Escalante National Monument, July 13, 2026</a> <span class="how">Web page.</span></li>
+<li><a href="https://www.eenews.net/articles/theres-potential-trump-opens-utah-monument-land-to-miners-drillers/">E&E News, “Trump clears path for mining across shrunken Utah monuments,” July 14, 2026</a> <span class="how">Web page (opening section; rest is paywalled).</span></li>
+<li><a href="https://www.eia.gov/todayinenergy/detail.php?id=65787">U.S. Energy Information Administration, “Coal-fired power plants are well-stocked this year”</a> <span class="how">Web page.</span></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000200406/000020040613000038/ex13-form10xk20121230.htm">Johnson & Johnson 2012 Annual Report (Form 10-K exhibit)</a> <span class="how">SEC filing, web page.</span></li>
+<li><a href="https://en.wikipedia.org/wiki/Hansj%C3%B6rg_Wyss">Wikipedia, “Hansjörg Wyss”</a> <span class="how">Web page; used only for birthplace and giving totals.</span></li>
+<li><a href="https://www.eenews.net/articles/quietly-philanthropic-tycoon-makes-his-mark-in-the-west/">Phil Taylor, E&E News (Greenwire), “‘Quietly philanthropic’ tycoon makes his mark in the West,” March 2015</a> <span class="how">Web page.</span></li>
+<li><a href="https://en.wikipedia.org/wiki/Wyss_Foundation">Wikipedia, “Wyss Foundation”; MarketScreener insider listing for Hansjörg Wyss</a> <span class="how">Web pages. MarketScreener: https://de.marketscreener.com/insider/HANSJORG-WYSS-A00EIA/</span></li>
+<li><a href="https://suwa.org/about-suwa-2/suwa-board-of-directors/">Southern Utah Wilderness Alliance, Board of Directors page (modified April 24, 2026)</a> <span class="how">Web page, read Oct. 24, 2026. His name is absent from the full list as displayed, not from a partial extraction.</span></li>
+<li><a href="https://suwa.org/wp-content/uploads/Autumn-2005.pdf">SUWA, Redrock Wilderness newsletter, Autumn 2005</a> <span class="how">Text extraction of PDF.</span></li>
+<li><a href="https://suwa.org/wp-content/uploads/Fall-Winter_2020_WEB.pdf">SUWA, Redrock Wilderness newsletter, Autumn/Winter 2020</a> <span class="how">Text extraction of PDF.</span></li>
+<li><a href="https://www.wilderness.org/our-governing-council">The Wilderness Society, Our Governing Council</a> <span class="how">Web page.</span></li>
+<li><a href="https://utahnewsdispatch.com/2026/10/16/judge-reopens-lawsuits-challenging-cuts-of-bears-ears-grand-staircase/">Utah News Dispatch, “Judge reopens lawsuits challenging cuts of Bears Ears, Grand-Staircase,” Oct. 16, 2026</a> <span class="how">Web page.</span></li>
+<li><a href="https://www.kjzz.org/politics/2026-10-16/judge-revives-suit-over-efforts-to-shrink-bears-ears-grand-staircase-escalante-national-monuments">KJZZ, “Judge revives suit over efforts to shrink Bears Ears, Grand Staircase-Escalante,” Oct. 16, 2026</a> <span class="how">Web page.</span></li>
+<li><a href="https://flatheadbeacon.com/?p=11898">Flathead Beacon (Associated Press), 2010</a> <span class="how">Web page.</span></li>
+<li><a href="https://www.swissinfo.ch/eng/culture/bernese-billionaire-works-to-keep-west-wild/31446480">SWI swissinfo.ch, “Bernese billionaire works to keep West wild,” 2011</a> <span class="how">Web page.</span></li>
+<li><a href="https://public-inspection.federalregister.gov/2025-00428.pdf">Federal Register, Record of Decision notice, Grand Staircase-Escalante RMP (Jan. 13, 2025)</a> <span class="how">Text extraction of PDF.</span></li>
+<li><a href="https://utahnewsdispatch.com/?p=7862">Utah News Dispatch, “Grand Staircase-Escalante gets a new management plan,” Jan. 10, 2025</a> <span class="how">Web page.</span></li>
+<li><a href="https://npshistory.com/publications/blm/grand-staircase-escalante/rod-armp-gsenm-2025.pdf">BLM, Grand Staircase-Escalante National Monument Record of Decision and Approved RMP, 2025</a> <span class="how">Text extraction of PDF; the V Road statement is a positive statement in the text.</span></li>
+<li><a href="https://conservationalliance.com/?p=97210">Conservation Alliance, GSENM Management Plan success story, 2025</a> <span class="how">Web page.</span></li>
+<li><a href="https://www.foxintheforest.net/cosmic-ashtray-in-escalante-utah/">Fox in the Forest, Cosmic Ashtray guide</a> <span class="how">Web page (trip guide).</span></li>
+<li><a href="https://roadtripryan.com/go/t/utah/escalante/the-volcano---cosmic-ashtray">Road Trip Ryan, The Volcano / Cosmic Ashtray</a> <span class="how">Web page (trip guide with road mileage).</span></li>
+<li><a href="https://twooutliers.com/cosmic-ashtray-grand-staircase-escalante/">Two Outliers, Cosmic Ashtray route options</a> <span class="how">Web page (trip guide).</span></li>
+<li><a href="https://suwa.org/senator-lees-attempt-to-fast-track-attack-on-grand-staircase-escalante-national-monument-management-plan-fails/">SUWA press release, Lee CRA fast-track attempt fails, June 12, 2026</a> <span class="how">Web page.</span></li>
+<li><a href="https://www.sema.org/news-media/enews/2026/29/white-house-issues-new-direction-bears-ears-national-monument">SEMA, “White House Issues New Direction for Bears Ears National Monument,” July 2026; Proclamation 11043</a> <span class="how">Web page. Proclamation: https://www.federalregister.gov/documents/2026/07/17/2026-14548/modifying-the-bears-ears-national-monument</span></li>
+<li><a href="https://grist.org/politics/trump-bears-ears-mining-claims-prospectors-utah/">Grist, prospectors file claims on former Bears Ears land</a> <span class="how">Web page.</span></li>
+<li><a href="https://www.bia.gov/node/8068/printable/pdf">Bureau of Indian Affairs press release, June 10, 2009</a> <span class="how">Web page / PDF text.</span></li>
+<li><a href="https://www.presidency.ucsb.edu/documents/proclamation-10881-establishment-the-chuckwalla-national-monument">Proclamation 10881, Establishment of the Chuckwalla National Monument, Jan. 14, 2025</a> <span class="how">Full text, American Presidency Project.</span></li>
+</ol>
+<p style="margin-top:12px">Public records only. No comment requested. Read Oct. 24, 2026.</p>
+</div></details>
+
+</main>
+
+<footer class="hb-foot"><img src="hive-bee.png" alt="" onerror="this.style.display='none'"><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span><span class="hb-sub" style="margin-top:8px"><a href="https://webercountyhive.substack.com">webercountyhive.substack.com</a></span></footer>
+
+<script>
+(function(){
+  var btns=document.querySelectorAll('.filters button');
+  btns.forEach(function(b){ b.addEventListener('click',function(){
+    btns.forEach(function(x){x.setAttribute('aria-pressed','false');}); b.setAttribute('aria-pressed','true');
+    var f=b.dataset.f;
+    document.querySelectorAll('.verdict').forEach(function(v){ v.style.display=(f==='all'||v.dataset.v===f)?'':'none'; });
+  }); });
+  var D={
+    before:[{y:"Grand Staircase",l:"monument",a:1870000,cut:true},{y:"Bears Ears",l:"monument",a:1360000,cut:true},{y:"Canyonlands",l:"park",a:337598},{y:"Capitol Reef",l:"park",a:241904},{y:"Zion",l:"park",a:146597},{y:"Arches",l:"park",a:76679},{y:"Bryce Canyon",l:"park",a:35835}],
+    after:[{y:"Grand Staircase",l:"monument",a:181541,cut:true},{y:"Bears Ears",l:"monument",a:121096,cut:true},{y:"Canyonlands",l:"park",a:337598},{y:"Capitol Reef",l:"park",a:241904},{y:"Zion",l:"park",a:146597},{y:"Arches",l:"park",a:76679},{y:"Bryce Canyon",l:"park",a:35835}]
+  };
+  var box=document.getElementById('sizebars');
+  function draw(rows){
+    box.innerHTML=''; var max=1900000;
+    rows.forEach(function(d){
+      var row=document.createElement('div'); row.className='bar-row';
+      var lab=document.createElement('div'); lab.className='bar-lab'; lab.innerHTML='<strong>'+d.y+'</strong>'+d.l;
+      var tr=document.createElement('div'); tr.className='bar-track';
+      var f=document.createElement('div'); f.className='bar-fill'+(d.cut?' cut':''); f.style.width='0%';
+      var v=document.createElement('span'); v.className='bar-val'; v.textContent=d.a.toLocaleString('en-US')+' acres';
+      var pct=d.a/max*100;
+      if(pct<40) v.style.left='calc('+pct.toFixed(1)+'% + 8px)'; else if(d.cut) v.style.color='#FFFFFF';
+      tr.appendChild(f); tr.appendChild(v); row.appendChild(lab); row.appendChild(tr); box.appendChild(row);
+      requestAnimationFrame(function(){ requestAnimationFrame(function(){ f.style.width=pct.toFixed(1)+'%'; }); });
+    });
+  }
+  document.querySelectorAll('#sizeviz .toggle button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('#sizeviz .toggle button').forEach(function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true'); draw(D[b.dataset.m]);
+    });
+  });
+  draw(D.before);
+})();
+</script>
+<script type="module">
+  try {
+    const { default: mermaid } = await import('https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs');
+    mermaid.initialize({ startOnLoad: false, theme: 'base', securityLevel: 'strict', themeVariables: {
+      primaryColor: '#F7F1E1', primaryBorderColor: '#0A0A0A', primaryTextColor: '#141414',
+      lineColor: '#9C7A1F', edgeLabelBackground: '#FAF8F3', fontFamily: 'IBM Plex Mono, monospace', fontSize: '18px'
+    }});
+    await mermaid.run({ querySelector: '.mermaid' });
+  } catch (e) { }
+</script>
+<script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
